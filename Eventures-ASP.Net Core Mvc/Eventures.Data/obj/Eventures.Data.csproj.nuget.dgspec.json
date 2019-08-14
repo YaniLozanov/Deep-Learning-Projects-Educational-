@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Data\\Eventures.Data.csproj": {}
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Data\\Eventures.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Data\\Eventures.Data.csproj": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Data\\Eventures.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Data\\Eventures.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Data\\Eventures.Data.csproj",
         "projectName": "Eventures.Data",
-        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Data\\Eventures.Data.csproj",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Data\\Eventures.Data.csproj",
         "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Data\\obj\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,17 +21,17 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\Eventures.Domain.csproj": {
-                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\Eventures.Domain.csproj"
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\Eventures.Domain.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\Eventures.Domain.csproj"
               }
             }
           }
@@ -43,13 +43,9 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netstandard2.0": {
           "dependencies": {
             "Microsoft.AspNetCore.All": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[2.2.6, )"
             },
@@ -63,10 +59,14 @@
               "target": "Package",
               "version": "[2.2.6, )"
             },
-            "Microsoft.NETCore.App": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             }
           },
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\Eventures.Domain.csproj": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\Eventures.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\Eventures.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\Eventures.Domain.csproj",
         "projectName": "Eventures.Domain",
-        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\Eventures.Domain.csproj",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\Eventures.Domain.csproj",
         "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures\\Eventures.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Eventures-ASP.Net Core Mvc\\Eventures.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -95,14 +95,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -113,16 +113,22 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netstandard2.0": {
           "dependencies": {
-            "Microsoft.AspNetCore.All": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[2.2.6, )"
             },
-            "Microsoft.NETCore.App": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.2.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             }
           },
