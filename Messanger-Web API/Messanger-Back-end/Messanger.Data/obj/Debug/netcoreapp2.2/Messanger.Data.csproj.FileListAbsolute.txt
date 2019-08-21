@@ -1,0 +1,14 @@
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Data.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Data.runtimeconfig.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Data.runtimeconfig.dev.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Data.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Domain.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\bin\Debug\netcoreapp2.2\Messanger.Domain.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Data\obj\Debug\netcoreapp2.2\Messanger.Data.pdb
