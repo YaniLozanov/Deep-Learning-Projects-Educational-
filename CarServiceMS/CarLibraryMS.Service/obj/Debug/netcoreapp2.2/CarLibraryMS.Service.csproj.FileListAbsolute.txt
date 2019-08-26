@@ -1,0 +1,28 @@
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.deps.json
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.dll
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csproj.CoreCompileInputs.cache
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.AssemblyInfoInputs.cache
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.AssemblyInfo.cs
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.runtimeconfig.json
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.runtimeconfig.dev.json
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csprojAssemblyReference.cache
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.pdb
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.dll
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.pdb
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\source\repos\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.runtimeconfig.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.runtimeconfig.dev.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarLibraryMS.Service.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarLibraryMS.Service\obj\Debug\netcoreapp2.2\CarLibraryMS.Service.pdb

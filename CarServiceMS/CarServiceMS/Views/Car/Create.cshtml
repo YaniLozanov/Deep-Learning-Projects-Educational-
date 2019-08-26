@@ -1,0 +1,54 @@
+﻿@model CarServiceMS.Models.CarModels.CarBindingModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="text-center">Add your car hire!</h1>
+
+
+<form asp-controller="Car" asp-action="Create" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="d-flex justify-content-between">
+        <div class="form-group w-45">
+            <div class="d-flex justify-content-center">
+                <label asp-for="Brand" class="font-weight-bold"></label>
+            </div>
+            <input asp-for="Brand" class="form-control" type="text" placeholder="Brand..." />
+            <span asp-validation-for="Brand" class="text-danger"></span>
+        </div>
+        <div class="form-group w-45">
+            <div class="d-flex justify-content-center">
+                <label asp-for="Model" class="font-weight-bold"></label>
+            </div>
+            <input asp-for="Model" class="form-control" type="text" placeholder="Model..." />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+        <div class="form-group w-45">
+            <div class="d-flex justify-content-lg-center">
+                <label asp-for="YearFrom" class="font-weight-bold"></label>
+            </div>
+            <input asp-for="YearFrom" class="form-control" type="date" placeholder="Year..." />
+            <span asp-validation-for="YearFrom" class="text-danger"></span>
+        </div>
+        <div class="form-group w-45">
+            <div>
+                <label asp-for="Number" class="font-weight-bold"></label>
+            </div>
+            <input asp-for="Number" class="form-control" type="text" placeholder="Number..." />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+
+    </div>
+    <hr class="mt-3 bg-eventures hr-2" />
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="badge-dark">Add Your Car</button>
+    </div>
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
