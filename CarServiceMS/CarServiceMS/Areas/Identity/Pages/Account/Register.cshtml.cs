@@ -41,6 +41,12 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [MinLength(4, ErrorMessage = "The Username must be at least 4 characters long.")]
+            [MaxLength(10 , ErrorMessage = "The Username must be maximum 10 characters long.")]
+            [RegularExpression("^([A-Z]{1}([a-z0-9_]+))[a-z0-9]$", ErrorMessage = "Incorrect format!")]
+            public string Username { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -73,7 +79,7 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, PhoneNumber = Input.PhoneNumber};
+                var user = new ApplicationUser { UserName = Input.Username, Email = Input.Email, PhoneNumber = Input.PhoneNumber};
                 
 
                 var result = await _userManager.CreateAsync(user, Input.Password);

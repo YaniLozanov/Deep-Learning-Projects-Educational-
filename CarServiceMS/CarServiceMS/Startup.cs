@@ -44,7 +44,7 @@ namespace CarServiceMS
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddDefaultTokenProviders()
-                .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddDefaultUI(UIFramework.Bootstrap4) 
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<ICarService, CarService>();

@@ -82,3 +82,5 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\CarServiceMS.RazorTargetAssemblyInfo.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\CarServiceMS.Views.pdb
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\CarServiceMS.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\RegisterAdmin.g.cshtml.cs
