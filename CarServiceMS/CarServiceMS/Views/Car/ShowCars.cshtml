@@ -1,0 +1,65 @@
+﻿@model CarServiceMS.Models.BindingModels.CarListingModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+
+<html lang="en">
+</html>
+<head>
+    <meta charset="utf-8" />
+    <title>Table Style</title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+
+    <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
+</head>
+
+<body>
+    <div class="table-title">
+        <h3>Cars</h3>
+    </div>
+    @if (@Model.Cars != null)
+    {
+        @if (Model.Cars.Any())
+        {
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-left">Brand</th>
+                        <th class="text-left">Model</th>
+                        <th class="text-left">Year From</th>
+                        <th class="text-left">Number</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
+
+
+                    @foreach (var car in this.Model.Cars)
+                    {
+                        <tr>
+                            <td class="text-left">@car.Brand</td>
+                            <td class="text-left">@car.Model</td>
+                            <td class="text-left">@car.YearFrom</td>
+                            <td class="text-left">@car.Number</td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <h1>You do not have any cars!</h1>
+        }
+    }
+    else
+    {
+        <h1>You do not have any cars!</h1>
+    }
+
+</body>

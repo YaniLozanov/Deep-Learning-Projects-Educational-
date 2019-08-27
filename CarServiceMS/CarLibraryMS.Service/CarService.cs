@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace CarLibraryMS.Service
 {
@@ -39,20 +39,21 @@ namespace CarLibraryMS.Service
                 .FirstOrDefault(car => car.Id == id);
         }
 
-        public ApplicationUser GetUserById(string id)
+        public ApplicationUser GetUserByName(string name)
         {
             return this.context.Users
                 .Include(user => user.Cars).ThenInclude(car => car.Manipulations)
-                .FirstOrDefault(user => user.Id == id);
+                .FirstOrDefault(user => user.UserName == name);
                 
         }
 
-        public void RemoveCar(int id)
+        public async Task RemoveCar(int id)
         {
             this.context
                 .Cars
                 .Remove(this.context.Cars.FirstOrDefault(car => car.Id == id));
-            this.context.SaveChanges();
+
+          await  this.context.SaveChangesAsync();
         }
 
         public void UpdateCarData(int id)
