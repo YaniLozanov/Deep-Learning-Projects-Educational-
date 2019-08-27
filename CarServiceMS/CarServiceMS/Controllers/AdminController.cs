@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CarServiceMS.Data;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Models.BindingModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarServiceMS.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -23,26 +23,37 @@ namespace CarServiceMS.Controllers
             this.roleManager = roleManager;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult RegisterAdmin()
         {
-            
-
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> RegisterAdmin(AdminBindingModel adminInputModel)
         {
-            var admin = await userManager.FindByNameAsync(adminInputModel.Username);
+            var adminUser = await this.context.Users.SingleOrDefaultAsync(user => user.UserName == this.User.Identity.Name);
 
-            if (!await roleManager.RoleExistsAsync("Admin"))
+            var validPassword = await userManager.CheckPasswordAsync(adminUser, adminInputModel.SecretPassword);
+
+            if (ModelState.IsValid && validPassword)
             {
-                await roleManager.CreateAsync(new IdentityRole("Admin"));
+                var admin = await userManager.FindByNameAsync(adminInputModel.Username);
+
+                if (!await roleManager.RoleExistsAsync("Admin"))
+                {
+                    await roleManager.CreateAsync(new IdentityRole("Admin"));
+                }
+
+                await userManager.AddToRoleAsync(admin, "Admin");
+
+                return RedirectToAction("Index", "Home");
             }
-
-            await userManager.AddToRoleAsync(admin, "Admin");
-
-            return RedirectToAction("Index", "Home");
+            else
+            {
+                return this.View();
+            }
         }
 
 
