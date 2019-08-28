@@ -48,10 +48,15 @@ namespace CarServiceMS.Controllers
 
                 this.carService.AddCar(car);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ShowCars", "Car");
             }
             else
             {
+                if (isCarAlreadyExists)
+                {
+                    ModelState.AddModelError("Number", "Invalid Number");
+                    return this.View(carModel);
+                }
 
                 return this.View();
             }
@@ -100,7 +105,7 @@ namespace CarServiceMS.Controllers
             return RedirectToAction("ShowCars", "Car");
         }
 
-        public IActionResult EditPage(int id)
+        public IActionResult Edit(int id)
         {
             var carFromDb = this.carService.GetCarById(id);
 
@@ -118,16 +123,34 @@ namespace CarServiceMS.Controllers
         [HttpPost]
         public IActionResult Edit(CarBindingModel  carModel)
         {
-            var car = this.carService.GetCarById(carModel.Id);
 
-            car.Brand = carModel.Brand;
-            car.Model = carModel.Model;
-            car.YearFrom = carModel.YearFrom;
-            car.Number = carModel.Number;
+            bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
 
-            this.carService.EditCarData(car);
+            if (this.ModelState.IsValid && (isCarAlreadyExists == false))
+            {
+                var car = this.carService.GetCarById(carModel.Id);
 
-            return RedirectToAction("ShowCars", "Car");
+                car.Brand = carModel.Brand;
+                car.Model = carModel.Model;
+                car.YearFrom = carModel.YearFrom;
+                car.Number = carModel.Number;
+
+                this.carService.EditCarData(car);
+
+                return RedirectToAction("ShowCars", "Car");
+            }
+            else
+            {
+
+                if (isCarAlreadyExists)
+                {
+                    ModelState.AddModelError("Number", "Invalid Number");
+                    return this.View(carModel);
+                }
+
+                return this.View(carModel);
+            }
+            
 
         }
 

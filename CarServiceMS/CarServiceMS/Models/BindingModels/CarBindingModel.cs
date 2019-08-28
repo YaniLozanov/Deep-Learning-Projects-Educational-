@@ -10,7 +10,7 @@ namespace CarServiceMS.Models.CarModels
         public int Id { get; set; }
 
         [Required]
-        [RegularExpression("^[А-Я]{1,2}[0-9]{4}(([A-Я]{1,2})|([0-9]{1,2}))$", ErrorMessage = "Invalid Car Number!")]
+        [RegularExpression("^[А-ЯA-Z]{1,2}[А-ЯA-Z0-9]{2,6}$", ErrorMessage = "Invalid Number!")]
         public string Number { get; set; }
         [Required]
         public string Brand { get; set; }
@@ -21,7 +21,7 @@ namespace CarServiceMS.Models.CarModels
         [Required]
         public DateTime YearFrom { get; set; }
         [Required]
-        public DateTime RegistredOn { get; set; }
+        public DateTime RegistredOn { get; set; } = DateTime.Now;
 
         public ApplicationUser Owner { get; set; }
 

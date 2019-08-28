@@ -10,7 +10,8 @@ namespace CarServiceMS.Data.Models
         [Required]
         public int Id { get; set; }
 
-        [Required]       
+        [Required]
+        [RegularExpression("^[А-ЯA-Z]{1,2}[А-ЯA-Z0-9]{2,6}$", ErrorMessage = "Invalid Number!")]
         public string Number { get; set; }
         [Required]
         public string Brand { get; set; }
