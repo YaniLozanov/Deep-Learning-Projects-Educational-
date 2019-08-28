@@ -40,7 +40,7 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Car" asp-action="Create">Create</a>
+                                <a class="nav-link text-dark" asp-controller="Car" asp-action="ShowCars">My Cars</a>
                             </li>
 
                             @if (User.IsInRole("Admin"))

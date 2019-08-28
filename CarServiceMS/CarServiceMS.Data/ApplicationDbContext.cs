@@ -19,5 +19,14 @@ namespace CarServiceMS.Data
         public DbSet<Car> Cars { get; set; }
 
         public DbSet<Manipulation> Manipulations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Car>()
+                .HasIndex(u => u.Number)
+                .IsUnique(true);
+        }
     }
 }

@@ -2,10 +2,8 @@
 using CarServiceMS.Data.Interfaces;
 using CarServiceMS.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CarLibraryMS.Service
 {
@@ -34,9 +32,11 @@ namespace CarLibraryMS.Service
 
         public Car GetCarById(int id)
         {
-            return this.context.Cars
+            var carFromDb = this.context.Cars
                 .Include(car => car.Manipulations)
                 .FirstOrDefault(car => car.Id == id);
+
+            return carFromDb;
         }
 
         public ApplicationUser GetUserByName(string name)
@@ -47,18 +47,25 @@ namespace CarLibraryMS.Service
                 
         }
 
-        public async Task RemoveCar(int id)
+        public void RemoveCar(int id)
         {
             this.context
                 .Cars
                 .Remove(this.context.Cars.FirstOrDefault(car => car.Id == id));
 
-          await  this.context.SaveChangesAsync();
+            this.context.SaveChanges();
         }
 
-        public void UpdateCarData(int id)
+        public void EditCarData(Car car)
         {
-            throw new NotImplementedException();
+            this.context.Update(car);
+
+            this.context.SaveChanges();
+        }
+
+        public bool IsThereSuchCar(string number)
+        {
+            return this.context.Cars.Any(car => car.Number == number);
         }
     }
 }

@@ -10,8 +10,9 @@ namespace CarServiceMS.Data.Interfaces
         Car GetCarById(int id);
         ApplicationUser GetUserByName(string id);
         void AddCar(Car car);
-        Task RemoveCar(int id);
-        void UpdateCarData(int id);
+        void RemoveCar(int id);
+        void EditCarData(Car car);
+        bool IsThereSuchCar(string number);
 
         IEnumerable<Car> GetAllCars(string userId);
 

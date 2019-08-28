@@ -20,46 +20,87 @@
 
 <body>
     <div class="table-title">
-        <h3>Cars</h3>
+        <h3 align="center">Cars</h3>
     </div>
     @if (@Model.Cars != null)
     {
         @if (Model.Cars.Any())
         {
-            <table class="table-fill">
-                <thead>
-                    <tr>
-                        <th class="text-left">Brand</th>
-                        <th class="text-left">Model</th>
-                        <th class="text-left">Year From</th>
-                        <th class="text-left">Number</th>
-                    </tr>
-                </thead>
-                <tbody class="table-hover">
 
-
-                    @foreach (var car in this.Model.Cars)
-                    {
+            <div>
+                <table class="table-fill">
+                    <thead>
                         <tr>
-                            <td class="text-left">@car.Brand</td>
-                            <td class="text-left">@car.Model</td>
-                            <td class="text-left">@car.YearFrom</td>
-                            <td class="text-left">@car.Number</td>
+                            <th class="text-center">Brand</th>
+                            <th class="text-center">Model</th>
+                            <th class="text-center">Year From</th>
+                            <th class="text-center">Number</th>
+                            <th class="text-left"></th>
+                            <th class="text-left"></th>
+
                         </tr>
-                    }
+                    </thead>
+                    <tbody class="table-hover">
 
-                </tbody>
 
-            </table>
+                        @foreach (var car in this.Model.Cars)
+                        {
+                            <tr>
+                                <td class="text-center">@car.Brand</td>
+                                <td class="text-center">@car.Model</td>
+                                <td class="text-center">@car.YearFrom.Year</td>
+                                <td class="text-center">@car.Number</td>
+                                <td class="text-center">
+                                    <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
+                                        <button class="badge-dark">Remove</button>
+                                           
+                                    </a> 
+                                </td>
+                                <td class="text-center">
+                                    <a asp-controller="Car" asp-action="EditPage" asp-route-id="@car.Id">
+                                        <button class="badge-dark">Edit</button>
+
+                                    </a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="d-flex justify-content-center">
+
+                <a asp-controller="Car" asp-action="Create">
+                    <button class="badge-dark">Add Your Car</button>
+                </a>
+
+            </div>
         }
         else
         {
-            <h1>You do not have any cars!</h1>
+            <h1 align="center" >You do not have any cars!</h1>
+
+            <div class="d-flex justify-content-center">
+
+                <a asp-controller="Car" asp-action="Create">
+                    <button class="badge-dark">Add Your Car</button>
+                </a>
+
+            </div>
         }
     }
     else
     {
-        <h1>You do not have any cars!</h1>
+        <h1 align="center">You do not have any cars!</h1>
+
+        <div class="d-flex justify-content-center">
+
+            <a asp-controller="Car" asp-action="Create">
+                <button class="badge-dark">Add Your Car</button>
+            </a>
+
+        </div>
     }
 
 </body>

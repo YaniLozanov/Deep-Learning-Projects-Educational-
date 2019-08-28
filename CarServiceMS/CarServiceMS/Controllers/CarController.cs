@@ -28,12 +28,13 @@ namespace CarServiceMS.Controllers
             return this.View();
         }
     
+        [Authorize]
         [HttpPost]   
         public  IActionResult Create(CarBindingModel carModel)
         {
+            bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
             
-
-            if (this.ModelState.IsValid)
+            if (this.ModelState.IsValid && (isCarAlreadyExists == false))
             {
                 var car = new Car
                 {
@@ -56,7 +57,8 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public  IActionResult ShowCars()
+        [Authorize]
+        public IActionResult ShowCars()
         {
             var user = this.carService.GetUserByName(this.User.Identity.Name);
 
@@ -66,6 +68,7 @@ namespace CarServiceMS.Controllers
             {
                 var cars = carsFromDb.Select(car => new CarBindingModel()
                 {
+                    Id = car.Id,
                     Brand = car.Brand,
                     Model = car.Model,
                     Number = car.Number,
@@ -87,7 +90,48 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        
+        public IActionResult Remove(int id)
+        {
+
+            this.carService.RemoveCar(id);
+
+            //return this.View("ShowCars");
+
+            return RedirectToAction("ShowCars", "Car");
+        }
+
+        public IActionResult EditPage(int id)
+        {
+            var carFromDb = this.carService.GetCarById(id);
+
+            var car = new CarBindingModel()
+            {
+                Brand = carFromDb.Brand,
+                Model = carFromDb.Model,
+                YearFrom = carFromDb.YearFrom,
+                Number = carFromDb.Number
+            };
+
+            return this.View(car);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(CarBindingModel  carModel)
+        {
+            var car = this.carService.GetCarById(carModel.Id);
+
+            car.Brand = carModel.Brand;
+            car.Model = carModel.Model;
+            car.YearFrom = carModel.YearFrom;
+            car.Number = carModel.Number;
+
+            this.carService.EditCarData(car);
+
+            return RedirectToAction("ShowCars", "Car");
+
+        }
+
+
 
     }
 }

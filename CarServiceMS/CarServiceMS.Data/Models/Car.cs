@@ -10,7 +10,7 @@ namespace CarServiceMS.Data.Models
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required]       
         public string Number { get; set; }
         [Required]
         public string Brand { get; set; }
@@ -20,6 +20,7 @@ namespace CarServiceMS.Data.Models
 
         [Required]
         public DateTime YearFrom { get; set; }
+
         [Required]
         public DateTime RegistredOn { get; set; }
 

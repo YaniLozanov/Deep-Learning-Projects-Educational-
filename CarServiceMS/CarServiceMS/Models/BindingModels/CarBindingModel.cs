@@ -7,7 +7,8 @@ namespace CarServiceMS.Models.CarModels
 {
     public class CarBindingModel
     {
-   
+        public int Id { get; set; }
+
         [Required]
         [RegularExpression("^[А-Я]{1,2}[0-9]{4}(([A-Я]{1,2})|([0-9]{1,2}))$", ErrorMessage = "Invalid Car Number!")]
         public string Number { get; set; }
