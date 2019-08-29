@@ -7,11 +7,10 @@
 
 
 
-
 <html lang="en">
 </html>
 <head>
-
+ 
     <meta charset="utf-8" />
     <title>Table Style</title>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
@@ -54,7 +53,7 @@
                                 <td class="text-center">@car.YearFrom.Year</td>
                                 <td class="text-center">@car.Number</td>
                                 <td class="text-center">
-                                    <button id="remove-button" onclick="removeAlert(@car.Id)" class="badge-dark">Remove</button>
+                                    <button id="remove-button" onclick="showRemoveField(@car.Id)" class="badge-dark">Remove</button>
                                 </td>
                                 <td class="text-center">
                                     <a asp-controller="Car" asp-action="Edit" asp-route-id="@car.Id">
@@ -64,27 +63,32 @@
                             </tr>
                             <tr id="@car.Id" style="display: none">
                                 <td style="padding-right:10px; padding-left:10px" class="text-center" colspan="2">Your password:</td>
-                                <form>
-                                     <td style="padding-right:10px; padding-left:10px" class="text-center" colspan="2">
-                                         
-                                             <input type="password" id="password" size="20" />
-                                         
-                                     </td>
-                                     <td style="padding-right:5px; padding-left:5px" class="text-center">
-                                        
-                                         <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
-                                             <button size="30" id="remove-button" onclick="removeAlert(@car.Id)"
-                                                     class="badge-dark">
-                                                 Confirm
-                                             </button>
-                                         </a>
-                                         
-                                     </td>
+                                <form asp-controller="Car" asp-action="Remove" method="post">
+                                    <td style="padding-right:10px; padding-left:10px" class="text-center" colspan="2">
+
+                                        <input  asp-for="Password" type="password" size="20" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                        <input asp-for="Id" type="hidden" value="@car.Id" />
+
+
+                                    </td>
+                                    <td style="padding-right:5px; padding-left:5px" class="text-center">
+
+                                        <button type="submit" size="30" id="remove-button" onclick="showRemoveField(@car.Id)"
+                                                class="badge-dark">
+                                            Confirm
+                                        </button>
+
+
+
+                                    </td>
                                 </form>
+                               
                                 <td style="padding-right:5px; padding-left:5px" class="text-center">
-                                    <button
-                                            id="remove-button" onclick="removeAlert(@car.Id)" 
-                                            class="badge-dark">Cancel</button>
+                                    <button id="remove-button" onclick="hiderRemoveField(@car.Id)"
+                                            class="badge-dark">
+                                        Cancel
+                                    </button>
                                 </td>
                             </tr>
                         }
@@ -130,15 +134,17 @@
 
 <script>
 
-
-
-
-
-
-    function removeAlert(number) {
+    function showRemoveField(number) {
 
         let div = document.getElementById(number.toString());
 
         div.style.display = "table-row";
     }
+
+    function hiderRemoveField(number){
+        let div = document.getElementById(number.toString());
+
+        div.style.display = "none";
+    }
 </script>
+

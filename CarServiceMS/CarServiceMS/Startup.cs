@@ -46,6 +46,7 @@ namespace CarServiceMS
             {
                 // Password settings
                 options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
                 options.Password.RequiredLength = 6;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;            

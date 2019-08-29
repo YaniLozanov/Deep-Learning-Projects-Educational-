@@ -8,7 +8,8 @@ namespace CarServiceMS.Data.Interfaces
     public interface ICarService
     {
         Car GetCarById(int id);
-        ApplicationUser GetUserByName(string id);
+        ApplicationUser GetUserByName(string name);
+        ApplicationUser GetUserByCarId(int id);
         void AddCar(Car car);
         void RemoveCar(int id);
         void EditCarData(Car car);

@@ -95,14 +95,33 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public IActionResult Remove(int id, string password)
+        public async Task<IActionResult> Remove(CarListingModel model)
         {
+            var carId = model.Id;
+            var password = model.Password;
+            var user = this.carService.GetUserByCarId(carId);
 
-            this.carService.RemoveCar(id);
+            var validPassword = await userManager.CheckPasswordAsync(user, password);
 
-            //return this.View("ShowCars");
+            if (this.ModelState.IsValid && validPassword)
+            {
+                this.carService.RemoveCar(model.Id);
 
-            return RedirectToAction("ShowCars", "Car");
+
+                return RedirectToAction("ShowCars", "Car");
+            }
+            else
+            {
+                if (validPassword == false)
+                {
+                    this.ModelState.AddModelError("Password", "Invalid Password!");
+                    return RedirectToAction("ShowCars", "Car");
+                }
+                else
+                {
+                    return RedirectToAction("ShowCars", "Car");
+                }
+            }
         }
 
         public IActionResult Edit(int id)

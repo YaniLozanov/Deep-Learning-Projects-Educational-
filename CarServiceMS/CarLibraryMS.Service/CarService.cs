@@ -67,5 +67,12 @@ namespace CarLibraryMS.Service
         {
             return this.context.Cars.Any(car => car.Number == number);
         }
+
+        public ApplicationUser GetUserByCarId(int id)
+        {
+            return this.context.User
+                .Include(user => user.Cars)
+                .SingleOrDefault(user => user.Cars.Any(car => car.Id == id));
+        }
     }
 }
