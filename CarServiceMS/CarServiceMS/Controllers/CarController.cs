@@ -95,7 +95,7 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public IActionResult Remove(int id)
+        public IActionResult Remove(int id, string password)
         {
 
             this.carService.RemoveCar(id);

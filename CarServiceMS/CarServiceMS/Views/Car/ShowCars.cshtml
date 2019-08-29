@@ -11,6 +11,7 @@
 <html lang="en">
 </html>
 <head>
+
     <meta charset="utf-8" />
     <title>Table Style</title>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
@@ -19,6 +20,8 @@
 </head>
 
 <body>
+
+
     <div class="table-title">
         <h3 align="center">Cars</h3>
     </div>
@@ -51,18 +54,38 @@
                                 <td class="text-center">@car.YearFrom.Year</td>
                                 <td class="text-center">@car.Number</td>
                                 <td class="text-center">
-                                    <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
-                                        <button class="badge-dark">Remove</button>
-                                           
-                                    </a> 
+                                    <button id="remove-button" onclick="removeAlert(@car.Id)" class="badge-dark">Remove</button>
                                 </td>
                                 <td class="text-center">
                                     <a asp-controller="Car" asp-action="Edit" asp-route-id="@car.Id">
                                         <button class="badge-dark">Edit</button>
-
                                     </a>
                                 </td>
-
+                            </tr>
+                            <tr id="@car.Id" style="display: none">
+                                <td style="padding-right:10px; padding-left:10px" class="text-center" colspan="2">Your password:</td>
+                                <form>
+                                     <td style="padding-right:10px; padding-left:10px" class="text-center" colspan="2">
+                                         
+                                             <input type="password" id="password" size="20" />
+                                         
+                                     </td>
+                                     <td style="padding-right:5px; padding-left:5px" class="text-center">
+                                        
+                                         <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
+                                             <button size="30" id="remove-button" onclick="removeAlert(@car.Id)"
+                                                     class="badge-dark">
+                                                 Confirm
+                                             </button>
+                                         </a>
+                                         
+                                     </td>
+                                </form>
+                                <td style="padding-right:5px; padding-left:5px" class="text-center">
+                                    <button
+                                            id="remove-button" onclick="removeAlert(@car.Id)" 
+                                            class="badge-dark">Cancel</button>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -79,7 +102,7 @@
         }
         else
         {
-            <h1 align="center" >You do not have any cars!</h1>
+            <h1 align="center">You do not have any cars!</h1>
 
             <div class="d-flex justify-content-center">
 
@@ -104,3 +127,18 @@
     }
 
 </body>
+
+<script>
+
+
+
+
+
+
+    function removeAlert(number) {
+
+        let div = document.getElementById(number.toString());
+
+        div.style.display = "table-row";
+    }
+</script>
