@@ -228,6 +228,22 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.2.3, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Validation": {
+              "target": "Package",
+              "version": "[3.2.11, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "jQuery.UI.Combined": {
+              "target": "Package",
+              "version": "[1.12.1, )"
+            },
+            "jQuery.Validation": {
+              "target": "Package",
+              "version": "[1.17.0, )"
             }
           },
           "imports": [

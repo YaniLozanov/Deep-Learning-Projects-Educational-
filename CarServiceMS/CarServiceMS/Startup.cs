@@ -47,9 +47,9 @@ namespace CarServiceMS
                 // Password settings
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
-                options.Password.RequiredLength = 6;
+                options.Password.RequiredLength = 8;
                 options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;            
+                options.Password.RequireUppercase = true;            
             });
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -58,6 +58,8 @@ namespace CarServiceMS
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<ICarService, CarService>();
+            services.AddMvcCore().AddDataAnnotations();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

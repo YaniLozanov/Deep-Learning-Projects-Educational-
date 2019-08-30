@@ -23,17 +23,17 @@ namespace CarServiceMS.Controllers
         }
 
         [Authorize]
-        public IActionResult Create ()
+        public IActionResult Create()
         {
             return this.View();
         }
-    
+
         [Authorize]
-        [HttpPost]   
-        public  IActionResult Create(CarBindingModel carModel)
+        [HttpPost]
+        public IActionResult Create(CarBindingModel carModel)
         {
             bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
-            
+
             if (this.ModelState.IsValid && (isCarAlreadyExists == false))
             {
                 var car = new Car
@@ -95,7 +95,15 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public async Task<IActionResult> Remove(CarListingModel model)
+        public IActionResult Remove(int id)
+        {
+            var carRemoveModel = new CarRemoveModel() { Id = id };
+
+            return this.View(carRemoveModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Remove(CarRemoveModel model)
         {
             var carId = model.Id;
             var password = model.Password;
@@ -140,7 +148,7 @@ namespace CarServiceMS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(CarBindingModel  carModel)
+        public IActionResult Edit(CarBindingModel carModel)
         {
 
             bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
@@ -165,11 +173,12 @@ namespace CarServiceMS.Controllers
                 {
                     ModelState.AddModelError("Number", "Invalid Number");
                     return this.View(carModel);
+
                 }
 
                 return this.View(carModel);
             }
-            
+
 
         }
 
