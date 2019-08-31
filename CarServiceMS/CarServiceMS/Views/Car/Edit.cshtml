@@ -10,6 +10,7 @@
 <form asp-controller="Car" asp-action="Edit" method="post">
 
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
     <div class="d-flex justify-content-between">
         <div class="form-group w-45">
             <div class="d-flex justify-content-center">
@@ -50,6 +51,7 @@
 
 </form>
 
+<script src="~/lib/jquery/dist/jquery.js"></script>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

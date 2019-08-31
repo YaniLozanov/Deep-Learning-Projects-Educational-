@@ -11,10 +11,6 @@
 </html>
 <head>
 
-    <meta charset="utf-8" />
-    <title>Table Style</title>
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
-
     <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
 </head>
 
@@ -22,12 +18,12 @@
 
 
     <div class="table-title">
-        <h3 align="center">Cars</h3>
     </div>
     @if (@Model.Cars != null)
     {
         @if (Model.Cars.Any())
         {
+            <h1 align="center" style="color: black">My Cars</h1>
 
             <div>
                 <table class="table-fill">
@@ -35,7 +31,7 @@
                         <tr>
                             <th class="text-center">Brand</th>
                             <th class="text-center">Model</th>
-                            <th class="text-center">Year From</th>
+                            <th class="text-center">Year</th>
                             <th class="text-center">Number</th>
                             <th class="text-left"></th>
                             <th class="text-left"></th>
@@ -47,60 +43,47 @@
 
                         @foreach (var car in this.Model.Cars)
                         {
-                        <tr>
-                            <td class="text-center">@car.Brand</td>
-                            <td class="text-center">@car.Model</td>
-                            <td class="text-center">@car.YearFrom.Year</td>
-                            <td class="text-center">@car.Number</td>
-                            <td class="text-center">
-                                <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
-                                    <button class="badge-dark">Remove</button>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a asp-controller="Car" asp-action="Edit" asp-route-id="@car.Id">
-                                    <button class="badge-dark">Edit</button>
-                                </a>
-                            </td>
-                            
-                        </tr>     
+                            <tr>
+                                <td class="text-center">@car.Brand</td>
+                                <td class="text-center">@car.Model</td>
+                                <td class="text-center">@car.YearFrom.Year</td>
+                                <td class="text-center">@car.Number</td>
+                                <td class="text-center">
+                                    <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
+                                        <button class="btn btn-dark button-Register">Remove</button>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-controller="Car" asp-action="Edit" asp-route-id="@car.Id">
+                                        <button class="btn btn-dark button-Register">Edit</button>
+                                    </a>
+                                </td>
+
+                            </tr>
                         }
                     </tbody>
 
                 </table>
             </div>
-            <div class="d-flex justify-content-center">
 
-                <a asp-controller="Car" asp-action="Create">
-                    <button class="badge-dark">Add Your Car</button>
-                </a>
-
-            </div>
         }
         else
         {
             <h1 align="center">You do not have any cars!</h1>
 
-            <div class="d-flex justify-content-center">
-
-                <a asp-controller="Car" asp-action="Create">
-                    <button class="badge-dark">Add Your Car</button>
-                </a>
-
-            </div>
         }
     }
     else
     {
         <h1 align="center">You do not have any cars!</h1>
-
-        <div class="d-flex justify-content-center">
-
-            <a asp-controller="Car" asp-action="Create">
-                <button class="badge-dark">Add Your Car</button>
-            </a>
-
-        </div>
     }
+
+    <div style="padding:20px" class="text-center">
+
+        <a asp-controller="Car" asp-action="Create">
+            <button class="btn btn-dark button-Register">Add Your Car</button>
+        </a>
+
+    </div>
 
 </body>

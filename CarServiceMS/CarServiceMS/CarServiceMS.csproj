@@ -8,8 +8,6 @@
 
 
   <ItemGroup>
-    <PackageReference Include="jQuery" Version="3.4.1" />
-    <PackageReference Include="jQuery.UI.Combined" Version="1.12.1" />
     <PackageReference Include="jQuery.Validation" Version="1.17.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.6" />
     <PackageReference Include="Microsoft.AspNetCore.App" />

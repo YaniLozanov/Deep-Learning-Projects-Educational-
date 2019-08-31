@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
 body {
-    background-color: #666B85;
+    background-color: white;
     font-family: "Roboto", helvetica, arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -9,6 +9,7 @@ body {
 }
 
 div.table-title {
+    background-color:white;
     display: block;
     margin: auto;
     max-width: 600px;
@@ -31,7 +32,7 @@ div.table-title {
 
 .table-fill {
     background: white;
-    border-radius: 3px;
+    border-radius: 6px;
     border-collapse: collapse;
     height: 320px;
     margin: auto;
@@ -67,7 +68,7 @@ th {
 
 tr {
     border-top: 1px solid #C1C3D1;
-    border-bottom-: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
     color: #666B85;
     font-size: 16px;
     font-weight: normal;
@@ -89,7 +90,7 @@ tr {
     }
 
     tr:nth-child(odd) td {
-        background: #EBEBEB;
+        background: #FFFFFF;
     }
 
     tr:nth-child(odd):hover td {
@@ -105,7 +106,7 @@ tr {
     }
 
 td {
-    background: #FFFFFF;
+    background: #d6d6d6;
     padding: 20px;
     text-align: left;
     vertical-align: middle;

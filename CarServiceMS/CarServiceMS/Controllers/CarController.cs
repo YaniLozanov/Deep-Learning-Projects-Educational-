@@ -108,26 +108,30 @@ namespace CarServiceMS.Controllers
             var carId = model.Id;
             var password = model.Password;
             var user = this.carService.GetUserByCarId(carId);
+            var isPasswordValid = false;
 
-            var validPassword = await userManager.CheckPasswordAsync(user, password);
+            if (password != null)
+            {
+                isPasswordValid = await userManager.CheckPasswordAsync(user, password);
 
-            if (this.ModelState.IsValid && validPassword)
+            }
+
+            if (this.ModelState.IsValid && isPasswordValid)
             {
                 this.carService.RemoveCar(model.Id);
-
 
                 return RedirectToAction("ShowCars", "Car");
             }
             else
             {
-                if (validPassword == false)
+                if (isPasswordValid == false)
                 {
                     this.ModelState.AddModelError("Password", "Invalid Password!");
-                    return RedirectToAction("ShowCars", "Car");
+                    return RedirectToAction("Remove", "Car");
                 }
                 else
                 {
-                    return RedirectToAction("ShowCars", "Car");
+                    return RedirectToAction("Remove", "Car");
                 }
             }
         }
