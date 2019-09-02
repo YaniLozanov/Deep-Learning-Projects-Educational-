@@ -25,17 +25,26 @@
             <h1 align="center" style="color: black">Users</h1>
 
             <div>
-                <table class="table-fill">
+                <table class="table-fill" style="table-layout:fixed">
+
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="200" />
+
                     <thead>
                         <tr>
                             <th class="text-center" colspan="2">
-                                <input id="search-box" class="form-control input" type="search" placeholder="Search..." />
+                                <input id="search-box" class="form-control input" onkeyup="search()" type="text" placeholder="Search..." />
                             </th>
-                            <th class="text-center">
-                                <button class="btn btn-light" id="search-btn" onclick="search()">Search</button>
+
+                            <th>
                             </th>
+
                             <th class="text-center" colspan="2">
                                 <select class="browser-default custom-select" id="search-selector">
+
                                     <option value="Username">Username</option>
                                     <option value="Email">Email</option>
                                     <option value="PhoneNumber">Phone Number</option>
@@ -44,12 +53,12 @@
                                     <option value="CarModel">Car Model</option>
                                     <option value="CarNumber">Car Number</option>
 
-
                                 </select>
 
                             </th>
                         </tr>
                         <tr>
+
                             <th class="text-center">Username</th>
                             <th class="text-center">Email</th>
                             <th class="text-center">Phone Number</th>
@@ -60,8 +69,16 @@
                     </thead>
                     <tbody class="table-hover">
 
+                        <tr id="NoUsers" style="display: none">
+                            <td class="text-center" colspan="5">
+                                <h1>
+                                    <strong>There is no such user.</strong>
+                                </h1>
+                            </td>
+                        </tr>
 
-                        @foreach (var user in this.Model.Users)
+                        <!-- List all users, but cuurrent logged user -->
+                        @foreach (var user in this.Model.Users.Where(u => u.Username != this.User.Identity.Name))
                         {
                             <tr>
                                 <td name="Username" class="text-center">@user.Username</td>
@@ -70,15 +87,15 @@
                                 <td name="MemberSince" class="text-center">@user.MemberSince.ToShortDateString()</td>
 
                                 <td class="text-center">
+
                                     <a asp-controller="Car" asp-action="ShowCars" asp-route-id="@user.Id">
                                         <button class="btn btn-dark button-Register">Cars</button>
                                     </a>
-                                </td>
 
+                                </td>
                             </tr>
                         }
                     </tbody>
-
                 </table>
             </div>
 
@@ -101,8 +118,8 @@
 <script>
     let serachBox = document.getElementById("search-box");
     let serachSelector = document.getElementById("search-selector");
+    let noUsersRow = document.getElementById("NoUsers");
     let searchText = "";
-
 
     function search() {
 
@@ -110,7 +127,21 @@
 
         searchText = serachBox.value;
 
-        searchElementsCategory.forEach(element => filterTheElements(element));
+        let isThereSuchElement = searchElementsCategory.find(element => getElement(element));
+
+
+        if (isThereSuchElement) {
+
+            searchElementsCategory.forEach(element => filterTheElements(element));
+            noUsersRow.style.display = "none";
+
+        } else {
+            searchElementsCategory.forEach(element => filterTheElements(element));
+
+
+            noUsersRow.style.display = "table-row";
+        }
+
 
     }
 
@@ -118,12 +149,11 @@
 
         if (element.getAttribute('name') === serachSelector.value) {
 
-            if (element.innerText !== searchText) {
+            if (!element.innerText.toUpperCase().includes(searchText.toUpperCase())) {
 
                 element.parentElement.style.display = "none";
 
-            }
-            else {
+            } else {
 
                 let isTheElementHidden = element.parentElement.style.display === "none";
 
@@ -139,4 +169,9 @@
     }
 
 
+    function getElement(element) {
+
+        return element.innerText.toUpperCase().includes(searchText.toUpperCase()) && 
+            element.getAttribute('name') === serachSelector.value;
+    }
 </script>

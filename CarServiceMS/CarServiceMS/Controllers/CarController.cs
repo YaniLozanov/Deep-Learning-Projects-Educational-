@@ -161,7 +161,7 @@ namespace CarServiceMS.Controllers
 
                 this.carService.EditCarData(car);
 
-                return RedirectToAction("ShowCars", "Car");
+                return RedirectToAction("ListCars", "Car");
             }
             else
             {

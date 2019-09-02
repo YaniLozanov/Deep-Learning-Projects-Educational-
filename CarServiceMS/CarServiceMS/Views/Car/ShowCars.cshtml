@@ -26,7 +26,16 @@
             <h1 align="center" style="color: black">My Cars</h1>
 
             <div>
-                <table class="table-fill">
+                <table class="table-fill" style="table-layout:fixed">
+
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+
+
                     <thead>
                         <tr>
                             <th class="text-center">Brand</th>
@@ -70,7 +79,7 @@
                                     <td class="text-center" colspan="2" style="padding:10px">
                                         <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                                                asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
-                     
+
                                         <input asp-for="Id" value="@car.Id" type="hidden" />
                                         <div style="padding-top:10px">
                                             <span asp-validation-for="Password" class="text-danger" id="err-span-@car.Id"></span>
