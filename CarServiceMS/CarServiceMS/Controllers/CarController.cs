@@ -95,15 +95,8 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public IActionResult Remove(int id)
-        {
-            var carRemoveModel = new CarRemoveModel() { Id = id };
-
-            return this.View(carRemoveModel);
-        }
-
         [HttpPost]
-        public async Task<IActionResult> Remove(CarRemoveModel model)
+        public async Task<IActionResult> Remove(CarListingModel model)
         {
             var carId = model.Id;
             var password = model.Password;
@@ -126,12 +119,12 @@ namespace CarServiceMS.Controllers
             {
                 if (isPasswordValid == false)
                 {
-                    this.ModelState.AddModelError("Password", "Invalid Password!");
-                    return RedirectToAction("Remove", "Car");
+                    ModelState.AddModelError(string.Empty, "Ivalid Password!");
+                    return RedirectToAction("ShowCars", "Car");
                 }
                 else
                 {
-                    return RedirectToAction("Remove", "Car");
+                    return RedirectToAction("ShowCars", "Car");
                 }
             }
         }

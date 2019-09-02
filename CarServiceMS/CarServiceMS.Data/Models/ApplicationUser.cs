@@ -9,7 +9,7 @@ namespace CarServiceMS.Data.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        public DateTime MemberSince { get; set; } 
+        public DateTime MemberSince { get; set; } = DateTime.Now;
 
         public int ClubPoints { get; set; }
 

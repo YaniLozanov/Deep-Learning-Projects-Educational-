@@ -108,3 +108,9 @@ body {
     border-color: black;
     box-shadow: inset 1px 1px #000000, 0 0 8px #000000;
 }
+
+
+/*Selector*/
+.selector-style {
+    font-family: "Roboto", helvetica, arial, sans-serif;
+}

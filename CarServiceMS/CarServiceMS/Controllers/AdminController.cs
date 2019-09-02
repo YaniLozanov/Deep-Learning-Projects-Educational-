@@ -1,5 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using CarLibraryMS.Service;
 using CarServiceMS.Data;
+using CarServiceMS.Data.Interfaces;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Models.BindingModels;
 using Microsoft.AspNetCore.Authorization;
@@ -15,12 +18,15 @@ namespace CarServiceMS.Controllers
         private readonly ApplicationDbContext context;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IAdminService adminService;
 
-        public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
+                               RoleManager<IdentityRole> roleManager, IAdminService adminService)
         {
             this.context = context;
             this.userManager = userManager;
             this.roleManager = roleManager;
+            this.adminService = adminService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -54,6 +60,28 @@ namespace CarServiceMS.Controllers
             {
                 return this.View();
             }
+        }
+
+        public IActionResult ListUsers()
+        {
+            var users = this.adminService
+                .GetAllUsers()
+                .Select(user => new UserBindingModel()
+                {
+                    Id = user.Id,
+                    Username = user.UserName,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    MemberSince = user.MemberSince
+                });
+
+            var viewUsers = new UsersListingModel()
+            {
+                Users = users
+            };
+
+
+            return this.View(viewUsers);
         }
 
 

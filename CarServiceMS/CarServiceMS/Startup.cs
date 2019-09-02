@@ -58,6 +58,7 @@ namespace CarServiceMS
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IAdminService, AdminService>();
             services.AddMvcCore().AddDataAnnotations();
 
 

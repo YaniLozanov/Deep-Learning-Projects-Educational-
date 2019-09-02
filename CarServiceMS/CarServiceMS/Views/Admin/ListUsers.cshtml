@@ -1,0 +1,142 @@
+﻿@model CarServiceMS.Models.BindingModels.UsersListingModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<html lang="en">
+</html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
+</head>
+
+<body>
+
+
+    <div class="table-title">
+    </div>
+    @if (@Model.Users != null)
+    {
+        @if (Model.Users.Any())
+        {
+            <h1 align="center" style="color: black">Users</h1>
+
+            <div>
+                <table class="table-fill">
+                    <thead>
+                        <tr>
+                            <th class="text-center" colspan="2">
+                                <input id="search-box" class="form-control input" type="search" placeholder="Search..." />
+                            </th>
+                            <th class="text-center">
+                                <button class="btn btn-light" id="search-btn" onclick="search()">Search</button>
+                            </th>
+                            <th class="text-center" colspan="2">
+                                <select class="browser-default custom-select" id="search-selector">
+                                    <option value="Username">Username</option>
+                                    <option value="Email">Email</option>
+                                    <option value="PhoneNumber">Phone Number</option>
+                                    <option value="MemberSince">Member Since</option>
+                                    <option value="CarBrand">Car Brand</option>
+                                    <option value="CarModel">Car Model</option>
+                                    <option value="CarNumber">Car Number</option>
+
+
+                                </select>
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Username</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Phone Number</th>
+                            <th class="text-center">Member Since</th>
+                            <th class="text-left"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="table-hover">
+
+
+                        @foreach (var user in this.Model.Users)
+                        {
+                            <tr>
+                                <td name="Username" class="text-center">@user.Username</td>
+                                <td name="Email" class="text-center">@user.Email</td>
+                                <td name="PhoneNumber" class="text-center">@user.PhoneNumber</td>
+                                <td name="MemberSince" class="text-center">@user.MemberSince.ToShortDateString()</td>
+
+                                <td class="text-center">
+                                    <a asp-controller="Car" asp-action="ShowCars" asp-route-id="@user.Id">
+                                        <button class="btn btn-dark button-Register">Cars</button>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+        }
+        else
+        {
+            <h1 align="center">There are no users!</h1>
+
+        }
+    }
+    else
+    {
+        <h1 align="center">There are no users!</h1>
+    }
+
+</body>
+
+
+
+<script>
+    let serachBox = document.getElementById("search-box");
+    let serachSelector = document.getElementById("search-selector");
+    let searchText = "";
+
+
+    function search() {
+
+        let searchElementsCategory = Array.from(document.getElementsByTagName("td"));
+
+        searchText = serachBox.value;
+
+        searchElementsCategory.forEach(element => filterTheElements(element));
+
+    }
+
+    function filterTheElements(element) {
+
+        if (element.getAttribute('name') === serachSelector.value) {
+
+            if (element.innerText !== searchText) {
+
+                element.parentElement.style.display = "none";
+
+            }
+            else {
+
+                let isTheElementHidden = element.parentElement.style.display === "none";
+
+
+                if (isTheElementHidden) {
+
+                    element.parentElement.style.display = "table-row";
+                }
+            }
+
+        }
+
+    }
+
+
+</script>

@@ -49,9 +49,9 @@
                                 <td class="text-center">@car.YearFrom.Year</td>
                                 <td class="text-center">@car.Number</td>
                                 <td class="text-center">
-                                    <a asp-controller="Car" asp-action="Remove" asp-route-id="@car.Id">
-                                        <button class="btn btn-dark button-Register">Remove</button>
-                                    </a>
+
+                                    <button id="show-remove-@car.Id" onclick="showRemoveTr(@car.Id)" class="btn btn-dark button-Register">Remove</button>
+
                                 </td>
                                 <td class="text-center">
                                     <a asp-controller="Car" asp-action="Edit" asp-route-id="@car.Id">
@@ -59,6 +59,32 @@
                                     </a>
                                 </td>
 
+                            </tr>
+                            <tr id="remove-tr-@car.Id" style="display:none">
+                                <form asp-controller="Car" asp-action="Remove" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
+
+                                    <td class="text-center" colspan="2" style="padding:10px">
+                                        <span>Your Password:</span>
+                                    </td>
+                                    <td class="text-center" colspan="2" style="padding:10px">
+                                        <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                                               asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
+                     
+                                        <input asp-for="Id" value="@car.Id" type="hidden" />
+                                        <div style="padding-top:10px">
+                                            <span asp-validation-for="Password" class="text-danger" id="err-span-@car.Id"></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" style="padding:10px ">
+                                        <a asp-controller="Car" asp-action="Remove" onclick="errorMessage(@car.Id)">
+                                            <button type="submit" class="btn btn-dark button-Register">Confirm</button>
+                                        </a>
+                                    </td>
+                                </form>
+                                <td class="text-center" style="padding:5px">
+                                    <button class="btn btn-dark button-Register" name="cancel" onclick="collapseRemoveTd(@car.Id)">Cancel</button>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -75,6 +101,7 @@
     }
     else
     {
+
         <h1 align="center">You do not have any cars!</h1>
     }
 
@@ -87,3 +114,57 @@
     </div>
 
 </body>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    function errorMessage(carId) {
+
+        var password = document.getElementById(`${carId.toString()}`);
+        var errSpan = document.getElementById(`err-span-${carId.toString()}`)
+
+        password.addEventListener("input", changeValidity(event));
+
+        function changeValidity(e) {
+
+            if (password.validity.patternMismatch) {
+                password.setCustomValidity(' ');
+
+                    errSpan.innerText = "Invalid Password!";
+                } else {
+                    password.setCustomValidity("");
+
+                }
+            };
+        }
+
+
+    function showRemoveTr(carId) {
+
+        let removeTr = document.getElementById(`remove-tr-${carId.toString()}`);
+
+        removeTr.style.display = "table-row";
+
+        
+
+    }
+    function collapseRemoveTd(carId) {
+
+        let id = carId.toString();
+
+        let removeTr = document.getElementById(`remove-tr-${id}`);
+        var errSpan = document.getElementById(`err-span-${id}`)
+        var passwordInput = document.getElementById(`${id}`)
+
+        removeTr.style.display = 'none';
+        errSpan.innerHTML = '';
+        passwordInput.value = '';
+
+    }
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
