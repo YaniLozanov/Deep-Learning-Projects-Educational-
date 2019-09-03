@@ -1,4 +1,4 @@
-﻿@model CarServiceMS.Models.BindingModels.CarListingModel
+﻿@model CarServiceMS.Models.BindingModels.AdminServices.UsersCarsListingModel
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -24,7 +24,7 @@
     {
         @if (Model.Cars.Any())
         {
-            <h1 align="center" style="color: black">My Cars</h1>
+            <h1 align="center" style="color: black">@Model.Usrname Cars</h1>
 
             <div>
                 <table class="table-fill" style="table-layout:fixed">
@@ -71,7 +71,7 @@
 
                             </tr>
                             <tr id="remove-tr-@car.Id" style="display:none">
-                                <form asp-controller="Car" asp-action="Remove" method="post">
+                                <form asp-controller="Admin" asp-action="RemoveUsersCar" method="post">
                                     <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
 
                                     <td class="text-center" colspan="2" style="padding:10px">
@@ -87,7 +87,7 @@
                                         </div>
                                     </td>
                                     <td class="text-center" style="padding:10px ">
-                                        <a asp-controller="Car" asp-action="Remove" onclick="errorMessage(@car.Id)">
+                                        <a asp-controller="Admin" asp-action="RemoveUsersCar" onclick="errorMessage(@car.Id)">
                                             <button type="submit" class="btn btn-dark button-Register">Confirm</button>
                                         </a>
                                     </td>
@@ -105,24 +105,29 @@
         }
         else
         {
-            <h1 align="center">You do not have any cars!</h1>
+            <h1 align="center">@Model.Usrname does not have any cars!</h1>
 
         }
     }
     else
     {
 
-        <h1 align="center">You do not have any cars!</h1>
+        <h1 align="center">@Model.Usrname does not have any cars!</h1>
     }
 
     <div style="padding:20px" class="text-center">
 
         <a asp-controller="Car" asp-action="Create">
-            <button class="btn btn-dark button-Register">Add Your Car</button>
+            <button class="btn btn-dark button-Register">Add Car</button>
         </a>
-
     </div>
 
+    <div style="padding:20px" class="text-center">
+
+        <a asp-controller="Admin" asp-action="ListUsers">
+            <button class="btn btn-dark button-Register">Back</button>
+        </a>
+    </div>
 </body>
 
 

@@ -7,6 +7,7 @@ namespace CarServiceMS.Data.Interfaces
     {
         IList<ApplicationUser> GetAllUsers();
         IList<ApplicationUser> GetAllAdmins();
+        IList<Car> GetAllCars();
 
         void BanUser(string username);
         void DeleteAdmin();

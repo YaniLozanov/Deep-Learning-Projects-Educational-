@@ -8,5 +8,7 @@ namespace CarServiceMS.Models.BindingModels.AdminServices
     public class AdminServicesBindingModel
     {
         public UsersDataBindingModel UsersData { get; set; }
+        public CarsDataBindingModel CarsData { get; set; }
+
     }
 }

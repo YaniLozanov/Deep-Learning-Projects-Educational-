@@ -88,8 +88,8 @@
                                 <td name="MemberSince" class="text-center">@user.MemberSince.ToShortDateString()</td>
 
                                 <td class="text-center">
-                                    
-                                    <a asp-controller="Admin" asp-action="ListUserCars" asp-route-id="@user.Id">
+          
+                                    <a asp-controller="Admin" asp-action="ListUserCars" asp-route-id="@user.Id" asp-route-username="@user.Username">
                                         <button class="btn btn-dark button-Register">Cars</button>
                                     </a>
 

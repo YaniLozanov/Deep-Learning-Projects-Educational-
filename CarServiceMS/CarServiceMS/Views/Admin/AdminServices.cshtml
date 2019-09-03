@@ -53,15 +53,15 @@
 
                     <h3 class="pricing__title">Cars</h3>
 
-                    <div class="pricing__price">93</div>
+                    <div class="pricing__price">@Model.CarsData.Count</div>
 
                     <p class="pricing__sentence">Count</p>
 
                     <ul class="pricing__feature-list">
 
-                        <li class="pricing__feature ">Process: <span class="span-li">0</span></li>
-                        <li style="background-color:#29272b" class="pricing__feature ">Ready: <span class="span-li">0</span></li>
-                        <li class="pricing__feature ">Waiting: <span class="span-li">0</span></li>
+                        <li class="pricing__feature ">Process: <span class="span-li">@Model.CarsData.InPrcessCount</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Ready: <span class="span-li">@Model.CarsData.ReadyCount</span></li>
+                        <li class="pricing__feature ">Waiting: <span class="span-li">@Model.CarsData.WaitingCount</span></li>
 
 
 
@@ -71,6 +71,7 @@
                     <button class="pricing__action" onclick='window.location = "@Url.Action("ListUsers", "Admin")";'>Show Users</button>
                 </div>
                 <div class="pricing__item">
+                    <h3 class="pricing__title">Comming soon!</h3>
 
                     <h3 class="pricing__title">Profit</h3>
 

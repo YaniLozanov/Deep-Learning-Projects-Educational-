@@ -44,5 +44,11 @@ namespace CarLibraryMS.Service
                 .Include(user => user.Cars)
                 .ToList();
         }
+        public IList<Car> GetAllCars()
+        {
+            var cars = this.context.Cars.ToList();
+
+            return cars;
+        }
     }
 }
