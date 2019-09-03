@@ -1,0 +1,99 @@
+﻿@model CarServiceMS.Models.BindingModels.AdminServices.AdminServicesBindingModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/component.css" />
+    <!--[if IE]>
+
+    <![endif]-->
+</head>
+
+<body>
+    <div>
+        <section class="pricing-section bg-1">
+            <div class="pricing pricing--sonam">
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">Users</h3>
+
+                    <div class="pricing__price">@Model.UsersData.Count</div>
+
+                    <p class="pricing__sentence">Count</p>
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Оrdinary: <span class="span-li">@Model.UsersData.OrdinaryCount</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Admins: <span class="span-li">@Model.UsersData.AdminsCount</span></li>
+                        <li class="pricing__feature ">Banned: <span class="span-li">@Model.UsersData.BannedCount</span></li>
+
+
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListUsers", "Admin")";'>Show Users</button>
+
+
+                </div>
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">Cars</h3>
+
+                    <div class="pricing__price">93</div>
+
+                    <p class="pricing__sentence">Count</p>
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Process: <span class="span-li">0</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Ready: <span class="span-li">0</span></li>
+                        <li class="pricing__feature ">Waiting: <span class="span-li">0</span></li>
+
+
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListUsers", "Admin")";'>Show Users</button>
+                </div>
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">Profit</h3>
+
+                    <div class="pricing__price"><span class="pricing__sentence">$</span>0</div>
+                    <p class="pricing__sentence">Dollars</p>
+
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Repairs: <span class="span-li">$0</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Air Conditioners: <span class="span-li">$0</span></li>
+                        <li class="pricing__feature ">Maintenance: <span class="span-li">$0</span></li>
+
+
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListUsers", "Admin")";'>Show Users</button>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
