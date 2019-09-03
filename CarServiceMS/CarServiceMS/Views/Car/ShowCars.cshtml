@@ -6,6 +6,7 @@
 }
 
 
+<!DOCTYPE html>
 
 <html lang="en">
 </html>
@@ -80,7 +81,7 @@
                                         <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                                                asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
 
-                                        <input asp-for="Id" value="@car.Id" type="hidden" />
+                                        <input asp-for="Id" value="@car.Id" id="hidden-input-@car.Id" type="hidden" />
                                         <div style="padding-top:10px">
                                             <span asp-validation-for="Password" class="text-danger" id="err-span-@car.Id"></span>
                                         </div>
@@ -140,13 +141,13 @@
             if (password.validity.patternMismatch) {
                 password.setCustomValidity(' ');
 
-                    errSpan.innerText = "Invalid Password!";
-                } else {
-                    password.setCustomValidity("");
+                errSpan.innerText = "Invalid Password!";
+            } else {
+                password.setCustomValidity("");
 
-                }
-            };
-        }
+            }
+        };
+    }
 
 
     function showRemoveTr(carId) {
@@ -155,7 +156,7 @@
 
         removeTr.style.display = "table-row";
 
-        
+
 
     }
     function collapseRemoveTd(carId) {

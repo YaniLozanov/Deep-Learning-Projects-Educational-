@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarServiceMS.Data", "CarSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarLibraryMS.Service", "CarLibraryMS.Service\CarLibraryMS.Service.csproj", "{537A7B26-7005-4344-9484-AFA454CAF58D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45CA9C74-8636-4A65-A6D8-9828837B5979}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Todo", "Todo", "{45CA9C74-8636-4A65-A6D8-9828837B5979}"
 	ProjectSection(SolutionItems) = preProject
 		TODO.txt = TODO.txt
 	EndProjectSection

@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using CarLibraryMS.Service;
 using CarServiceMS.Data;
 using CarServiceMS.Data.Interfaces;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Models.BindingModels;
+using CarServiceMS.Models.BindingModels.AdminServices;
+using CarServiceMS.Models.CarModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -19,14 +20,17 @@ namespace CarServiceMS.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly IAdminService adminService;
+        private readonly ICarService carService;
 
         public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
-                               RoleManager<IdentityRole> roleManager, IAdminService adminService)
+                               RoleManager<IdentityRole> roleManager, IAdminService adminService,
+                               ICarService carService)
         {
             this.context = context;
             this.userManager = userManager;
             this.roleManager = roleManager;
             this.adminService = adminService;
+            this.carService = carService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -62,7 +66,8 @@ namespace CarServiceMS.Controllers
             }
         }
 
-        public IActionResult ListUsers()
+        [Authorize(Roles = "Admin")]
+        public  IActionResult ListUsers()
         {
             var users = this.adminService
                 .GetAllUsers()
@@ -72,8 +77,9 @@ namespace CarServiceMS.Controllers
                     Username = user.UserName,
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber,
-                    MemberSince = user.MemberSince
-                });
+                    MemberSince = user.MemberSince,
+                    Cars = user.Cars,
+                }); 
 
             var viewUsers = new UsersListingModel()
             {
@@ -84,6 +90,63 @@ namespace CarServiceMS.Controllers
             return this.View(viewUsers);
         }
 
+        [Authorize(Roles = "Admin")]
+        public IActionResult ListUserCars(string id)
+        {
+            var carsFromDb = this.carService.GetAllCars(id);
+
+            if (carsFromDb != null)
+            {
+                var cars = carsFromDb.Select(car => new CarBindingModel()
+                {
+                    Id = car.Id,
+                    Brand = car.Brand,
+                    Model = car.Model,
+                    Number = car.Number,
+                    YearFrom = car.YearFrom,
+                    
+
+                });
+
+                var carsBinding = new CarListingModel()
+                {
+                    Cars = cars
+                };
+
+                return this.View(carsBinding);
+            }
+            else
+            {
+                return this.View();
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult AdminServices()
+        {
+
+            var totalUsersCount = this.adminService.GetAllUsers().Count();
+
+
+            var adminsCount = this.adminService.GetAllAdmins().Count();
+            var bannedCount = 0;
+            var ordinaryUseres = totalUsersCount - adminsCount - bannedCount;
+
+            var usersData = new UsersDataBindingModel()
+            {
+                Count = totalUsersCount,
+                AdminsCount = adminsCount,
+                BannedCount = bannedCount,
+                OrdinaryCount = ordinaryUseres
+            };
+
+            var usersCarsProfits = new AdminServicesBindingModel()
+            {
+                UsersData = usersData
+            };
+
+            return this.View(usersCarsProfits);
+        }
 
 
     }

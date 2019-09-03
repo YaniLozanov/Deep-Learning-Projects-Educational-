@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceMS.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace CarServiceMS.Models.BindingModels
         public string PhoneNumber { get; set; }
 
         public DateTime MemberSince { get; set; }
+
+        public IEnumerable<Car> Cars { get; set; }
+
 
     }
 }

@@ -5,8 +5,9 @@
 @{
 }
 
-
+<!DOCTYPE html>
 <html lang="en">
+
 </html>
 <head>
 
@@ -87,8 +88,8 @@
                                 <td name="MemberSince" class="text-center">@user.MemberSince.ToShortDateString()</td>
 
                                 <td class="text-center">
-
-                                    <a asp-controller="Car" asp-action="ShowCars" asp-route-id="@user.Id">
+                                    
+                                    <a asp-controller="Admin" asp-action="ListUserCars" asp-route-id="@user.Id">
                                         <button class="btn btn-dark button-Register">Cars</button>
                                     </a>
 
@@ -171,7 +172,7 @@
 
     function getElement(element) {
 
-        return element.innerText.toUpperCase().includes(searchText.toUpperCase()) && 
+        return element.innerText.toUpperCase().includes(searchText.toUpperCase()) &&
             element.getAttribute('name') === serachSelector.value;
     }
 </script>

@@ -4,6 +4,7 @@ using CarServiceMS.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CarLibraryMS.Service
 {
@@ -26,15 +27,22 @@ namespace CarLibraryMS.Service
             throw new NotImplementedException();
         }
 
-        public void GetAllAdmins()
+        public IList<ApplicationUser> GetAllAdmins()
         {
-            throw new NotImplementedException();
+            var adminRoleId = this.context.Roles.FirstOrDefault(role => role.Name == "Admin").Id;
+
+            var adminsIds = this.context.UserRoles.Where(x => x.RoleId == adminRoleId).Select(x => x.UserId);
+
+            var admins = this.context.User.Where(x => adminsIds.Contains(x.Id)).ToList();
+
+            return admins;
         }
 
-        public IEnumerable<ApplicationUser> GetAllUsers()
+        public IList<ApplicationUser> GetAllUsers()
         {
             return this.context.Users
-                .Include(user => user.Cars);
+                .Include(user => user.Cars)
+                .ToList();
         }
     }
 }

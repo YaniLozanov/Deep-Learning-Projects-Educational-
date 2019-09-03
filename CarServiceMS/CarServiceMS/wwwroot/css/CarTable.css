@@ -8,14 +8,16 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+
 div.table-title {
-    background-color:white;
+    background-color: white;
     display: block;
     margin: auto;
     max-width: 600px;
     padding: 5px;
     width: 100%;
 }
+
 
 .table-title h3 {
     color: #fafafa;
@@ -35,18 +37,18 @@ div.table-title {
     border-radius: 6px;
     border-collapse: collapse;
     height: 320px;
-    margin: 600px;
+    margin: auto;
     max-width: 600px;
     padding: 5px;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     animation: float 5s infinite;
-    table-layout:fixed;
+    table-layout: fixed;
 }
+
 
 th {
     color: #D5DDE5;
-    
     background: #1b1e24;
     border-bottom: 4px solid #9ea7af;
     border-right: 1px solid #343a45;

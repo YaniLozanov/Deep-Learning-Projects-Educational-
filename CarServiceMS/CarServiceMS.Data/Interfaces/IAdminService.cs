@@ -5,9 +5,10 @@ namespace CarServiceMS.Data.Interfaces
 {
     public interface IAdminService
     {
-        IEnumerable<ApplicationUser> GetAllUsers();
+        IList<ApplicationUser> GetAllUsers();
+        IList<ApplicationUser> GetAllAdmins();
+
         void BanUser(string username);
         void DeleteAdmin();
-        void GetAllAdmins();
     }
 }
