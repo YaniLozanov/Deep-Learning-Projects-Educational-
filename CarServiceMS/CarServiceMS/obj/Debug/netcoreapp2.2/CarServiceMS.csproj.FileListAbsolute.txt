@@ -92,6 +92,10 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Car\ShowCars.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\AdminServices.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListAllCars.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUserCars.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\CarsAdmin\ListAllCars.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\ListUserCars.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\ListUsers.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\CreateUsersCar.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\EditUsersCar.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\CarsAdmin\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\_ValidationScriptsPartial.g.cshtml.cs
