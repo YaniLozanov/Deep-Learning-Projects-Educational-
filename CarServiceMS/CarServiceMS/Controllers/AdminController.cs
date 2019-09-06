@@ -203,6 +203,29 @@ namespace CarServiceMS.Controllers
             }
         }
 
+        public IActionResult ListAllCars()
+        {
+            var carsFromDb = this.adminService.GetAllCars();
+
+            var carsBinding = carsFromDb.Select(car => new CarBindingModel()
+            {
+                Id = car.Id,
+                Brand = car.Brand,
+                Model = car.Model,
+                YearFrom = car.YearFrom,
+                Number = car.Number,
+                RegistredOn = car.RegistredOn
+                
+            });
+
+
+            var cars = new CarListingModel()
+            {
+                Cars = carsBinding
+            };
+
+            return this.View(cars);
+        }
 
     }
 }

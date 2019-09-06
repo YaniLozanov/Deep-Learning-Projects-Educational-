@@ -89,8 +89,9 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Car\Edit.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Car\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Car\ShowCars.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUserCars.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\AdminServices.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListAllCars.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUserCars.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs

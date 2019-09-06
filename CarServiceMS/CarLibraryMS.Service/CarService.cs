@@ -58,7 +58,7 @@ namespace CarLibraryMS.Service
 
         public void EditCarData(Car car)
         {
-            this.context.Update(car);
+            this.context.Cars.Update(car);
 
             this.context.SaveChanges();
         }

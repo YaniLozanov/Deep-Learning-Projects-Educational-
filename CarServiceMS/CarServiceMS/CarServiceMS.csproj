@@ -23,4 +23,9 @@
     <ProjectReference Include="..\CarServiceMS.Data\CarServiceMS.Data.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Models\BindingModels\AdminServices\Profit\" />
+  </ItemGroup>
+
 </Project>

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarServiceMS.Controllers
 {
+    [Authorize(Roles = "Admin, User")]
     public class CarController : Controller
     {
         private readonly ICarService carService;
@@ -22,19 +23,20 @@ namespace CarServiceMS.Controllers
             this.userManager = userManager;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Create()
         {
             return this.View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin, User")]
+
         [HttpPost]
         public IActionResult Create(CarBindingModel carModel)
         {
-            bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
+          
 
-            if (this.ModelState.IsValid && (isCarAlreadyExists == false))
+            if (this.ModelState.IsValid)
             {
                 var car = new Car
                 {
@@ -52,17 +54,12 @@ namespace CarServiceMS.Controllers
             }
             else
             {
-                if (isCarAlreadyExists)
-                {
-                    ModelState.AddModelError("Number", "Invalid Number");
-                    return this.View(carModel);
-                }
-
+               
                 return this.View();
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult ShowCars()
         {
             var user = this.carService.GetUserByName(this.User.Identity.Name);
@@ -95,6 +92,7 @@ namespace CarServiceMS.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
         public async Task<IActionResult> Remove(CarListingModel model)
         {
@@ -129,11 +127,12 @@ namespace CarServiceMS.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Edit(int id)
         {
             var carFromDb = this.carService.GetCarById(id);
 
-            var car = new CarBindingModel()
+            var car = new EditCarBindingModel()
             {
                 Brand = carFromDb.Brand,
                 Model = carFromDb.Model,
@@ -144,35 +143,48 @@ namespace CarServiceMS.Controllers
             return this.View(car);
         }
 
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
-        public IActionResult Edit(CarBindingModel carModel)
+        public IActionResult Edit(EditCarBindingModel carModel)
         {
 
-            bool isCarAlreadyExists = this.carService.IsThereSuchCar(carModel.Number);
+         
 
-            if (this.ModelState.IsValid && (isCarAlreadyExists == false))
+            if (this.ModelState.IsValid)
             {
                 var car = this.carService.GetCarById(carModel.Id);
+
 
                 car.Brand = carModel.Brand;
                 car.Model = carModel.Model;
                 car.YearFrom = carModel.YearFrom;
-                car.Number = carModel.Number;
+
+
+
+                if (car.Number != carModel.Number)
+                {
+                    if (!this.carService.IsThereSuchCar(carModel.Number))
+                    {
+                        car.Number = carModel.Number;
+                    }
+                    else
+                    {
+
+                        ModelState.AddModelError("Number", "Invalid Number");
+                        return this.View(carModel);
+                    }
+                }
+              
+              
 
                 this.carService.EditCarData(car);
 
-                return RedirectToAction("ListCars", "Car");
+                return RedirectToAction("ShowCars", "Car");
             }
             else
             {
 
-                if (isCarAlreadyExists)
-                {
-                    ModelState.AddModelError("Number", "Invalid Number");
-                    return this.View(carModel);
-
-                }
-
+                ModelState.AddModelError("Number", "Invalid Number");
                 return this.View(carModel);
             }
 
