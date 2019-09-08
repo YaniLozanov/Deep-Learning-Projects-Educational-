@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceMS.Data.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -12,6 +13,7 @@ namespace CarServiceMS.Data.Models
 
         [Required]
         [RegularExpression("^[А-ЯA-Z]{1,2}[А-ЯA-Z0-9]{2,6}$", ErrorMessage = "Invalid Number!")]
+        [CarNumberUnique]
         public string Number { get; set; }
         [Required]
         public string Brand { get; set; }
@@ -23,7 +25,7 @@ namespace CarServiceMS.Data.Models
         public DateTime YearFrom { get; set; }
 
         [Required]
-        public DateTime RegistredOn { get; set; }
+        public DateTime RegistredOn { get; set; } = DateTime.Now;
 
         [Required]
         public ApplicationUser Owner { get; set; }

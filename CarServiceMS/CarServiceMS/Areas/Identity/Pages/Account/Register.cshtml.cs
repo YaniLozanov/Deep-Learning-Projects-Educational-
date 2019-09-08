@@ -44,8 +44,8 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
         {
             [Required]
             [MinLength(4, ErrorMessage = "The Username must be at least 4 characters long.")]
-            [MaxLength(10 , ErrorMessage = "The Username must be maximum 10 characters long.")]
-            [RegularExpression("^([A-Z]{1}([a-z0-9_]+))[a-z0-9]$", ErrorMessage = "Incorrect format!")]
+            [MaxLength(15 , ErrorMessage = "The Username must be maximum 15 characters long.")]
+            [RegularExpression("^([A-Z]{1}([a-z0-9_A-Z]+))[a-z0-9A-Z]$", ErrorMessage = "Incorrect format!")]
             public string Username { get; set; }
 
             [Required]
@@ -87,7 +87,8 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
                 {
                     UserName = Input.Username,
                     Email = Input.Email,
-                    PhoneNumber = Input.PhoneNumber                   
+                    PhoneNumber = Input.PhoneNumber,
+                    Role = "User"
                 };
                 
                 

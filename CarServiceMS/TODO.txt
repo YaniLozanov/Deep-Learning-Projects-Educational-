@@ -1,5 +1,1 @@
-1. Edit Cars in Admin Panel
 3.List Users Car.
-5.Remove searching by car properties
-7.Admin table with users => when there is no user
-8.Username pattern

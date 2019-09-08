@@ -53,6 +53,7 @@ namespace CarServiceMS.Controllers
                 }
 
                 await userManager.AddToRoleAsync(admin, "Admin");
+                adminService.ChangeUserRole(admin, "Admin");
 
                 return RedirectToAction("Index", "Home");
             }

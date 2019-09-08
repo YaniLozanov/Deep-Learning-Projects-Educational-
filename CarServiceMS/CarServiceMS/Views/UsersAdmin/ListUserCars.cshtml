@@ -1,0 +1,185 @@
+﻿@model CarServiceMS.Models.BindingModels.AdminServices.UsersCarsListingModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+</html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
+</head>
+
+<body>
+
+
+    <div class="table-title">
+    </div>
+    @if (@Model.Cars != null)
+    {
+        @if (Model.Cars.Any())
+        {
+            <h1 align="center" style="color: black">@Model.Username Cars</h1>
+
+            <div>
+                <table class="table-fill" style="table-layout:fixed">
+
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+                    <col width="130" />
+
+
+                    <thead>
+                        <tr>
+                            <th class="text-center">Brand</th>
+                            <th class="text-center">Model</th>
+                            <th class="text-center">Year</th>
+                            <th class="text-center">Number</th>
+                            <th class="text-left"></th>
+                            <th class="text-left"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="table-hover">
+
+
+                        @foreach (var car in this.Model.Cars)
+                        {
+                            <tr>
+                                <td class="text-center">@car.Brand</td>
+                                <td class="text-center">@car.Model</td>
+                                <td class="text-center">@car.YearFrom.Year</td>
+                                <td class="text-center">@car.Number</td>
+                                <td class="text-center">
+
+                                    <button id="show-remove-@car.Id" onclick="showRemoveTr(@car.Id)" class="btn btn-dark button-Register">Remove</button>
+
+                                </td>
+                                <td class="text-center">
+                                    <a asp-controller="UsersAdmin" asp-action="EditUsersCar" asp-route-id="@car.Id">
+                                        <button class="btn btn-dark button-Register">Edit</button>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr id="remove-tr-@car.Id" style="display:none">
+                                <form asp-controller="UsersAdmin" asp-action="RemoveUsersCar" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
+
+                                    <td class="text-center" colspan="2" style="padding:10px">
+                                        <span>Your Password:</span>
+                                    </td>
+                                    <td class="text-center" colspan="2" style="padding:10px">
+                                        <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                                               asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
+
+                                        <input asp-for="Id" value="@car.Id" type="hidden" />
+                                        <div style="padding-top:10px">
+                                            <span asp-validation-for="Password" class="text-danger" id="err-span-@car.Id"></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" style="padding:10px ">
+                                        <a asp-controller="UsersAdmin" asp-action="RemoveUsersCar" onclick="errorMessage(@car.Id)">
+                                            <button type="submit" class="btn btn-dark button-Register">Confirm</button>
+                                        </a>
+                                    </td>
+                                </form>
+                                <td class="text-center" style="padding:5px">
+                                    <button class="btn btn-dark button-Register" name="cancel" onclick="collapseRemoveTd(@car.Id)">Cancel</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+        }
+        else
+        {
+            <h1 align="center">@Model.Username does not have any cars!</h1>
+
+        }
+    }
+    else
+    {
+
+        <h1 align="center">@Model.Username does not have any cars!</h1>
+    }
+
+    <div style="padding:20px" class="text-center">
+
+        <a asp-controller="UsersAdmin" asp-action="CreateUsersCar" asp-route-username="@Model.Username">
+            <button class="btn btn-dark button-Register">Add Car</button>
+        </a>
+    </div>
+
+    <div style="padding:20px" class="text-center">
+
+        <a asp-controller="UsersAdmin" asp-action="ListUsers">
+            <button class="btn btn-dark button-Register">Back</button>
+        </a>
+    </div>
+</body>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    function errorMessage(carId) {
+
+        var password = document.getElementById(`${carId.toString()}`);
+        var errSpan = document.getElementById(`err-span-${carId.toString()}`)
+
+        password.addEventListener("input", changeValidity(event));
+
+        function changeValidity(e) {
+
+            if (password.validity.patternMismatch) {
+                password.setCustomValidity(' ');
+
+                errSpan.innerText = "Invalid Password!";
+            } else {
+                password.setCustomValidity("");
+
+            }
+        };
+    }
+
+
+    function showRemoveTr(carId) {
+
+        let removeTr = document.getElementById(`remove-tr-${carId.toString()}`);
+
+        removeTr.style.display = "table-row";
+
+
+
+    }
+    function collapseRemoveTd(carId) {
+
+        let id = carId.toString();
+
+        let removeTr = document.getElementById(`remove-tr-${id}`);
+        var errSpan = document.getElementById(`err-span-${id}`)
+        var passwordInput = document.getElementById(`${id}`)
+
+        removeTr.style.display = 'none';
+        errSpan.innerHTML = '';
+        passwordInput.value = '';
+
+    }
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

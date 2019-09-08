@@ -38,12 +38,13 @@ div.table-title {
     border-collapse: collapse;
     height: 320px;
     margin: auto;
-    max-width: 600px;
+    max-width: 100%;
+    min-width: 100%;
     padding: 5px;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     animation: float 5s infinite;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 
@@ -145,4 +146,22 @@ td.text-center {
 
 td.text-right {
     text-align: right;
+}
+.custom-width-180 {
+    max-width: 180px;
+    min-width: 180px;
+}
+
+.custom-width-200 {
+    max-width: 200px;
+    min-width: 200px;
+}
+.custom-width-150 {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.custom-width-100 {
+    max-width: 100px;
+    min-width: 100px;
 }

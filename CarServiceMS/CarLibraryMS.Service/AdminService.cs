@@ -17,9 +17,12 @@ namespace CarLibraryMS.Service
             this.context = context;
         }
 
-        public void BanUser(string username)
+        public void ChangeUserRole(ApplicationUser user, string role)
         {
-            throw new NotImplementedException();
+            user.Role = role;
+
+            this.context.Users.Update(user);
+            this.context.SaveChangesAsync();
         }
 
         public void DeleteAdmin()

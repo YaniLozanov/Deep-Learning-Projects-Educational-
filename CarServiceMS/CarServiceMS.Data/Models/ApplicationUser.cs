@@ -10,11 +10,10 @@ namespace CarServiceMS.Data.Models
     {
         [Required]
         public DateTime MemberSince { get; set; } = DateTime.Now;
-
         public int ClubPoints { get; set; }
-
         public string PersonalityDesctription { get; set; }
-
+        [Required]
+        public string Role { get; set; }
         public IEnumerable<Car> Cars { get; set; }
     }
 }

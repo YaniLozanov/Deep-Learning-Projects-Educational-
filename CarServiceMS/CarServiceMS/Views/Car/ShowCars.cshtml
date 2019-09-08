@@ -26,25 +26,17 @@
         {
             <h1 align="center" style="color: black">My Cars</h1>
 
-            <div>
-                <table class="table-fill" style="table-layout:fixed">
-
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-
+            <div style="overflow-x:auto;">
+                <table class="table-fill" style="table-layout:auto">
 
                     <thead>
                         <tr>
-                            <th class="text-center">Brand</th>
-                            <th class="text-center">Model</th>
-                            <th class="text-center">Year</th>
-                            <th class="text-center">Number</th>
-                            <th class="text-left"></th>
-                            <th class="text-left"></th>
+                            <th class="text-center custom-width-180">Brand</th>
+                            <th class="text-center custom-width-100">Model</th>
+                            <th class="text-center custom-width-100">Year</th>
+                            <th class="text-center custom-width-100">Number</th>
+                            <th class="text-left custom-width-100"></th>
+                            <th class="text-left custom-width-100"></th>
 
                         </tr>
                     </thead>
@@ -74,10 +66,10 @@
                                 <form asp-controller="Car" asp-action="Remove" method="post">
                                     <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
 
-                                    <td class="text-center" colspan="2" style="padding:10px">
+                                    <td class="text-center" colspan="1" >
                                         <span>Your Password:</span>
                                     </td>
-                                    <td class="text-center" colspan="2" style="padding:10px">
+                                    <td class="text-center" colspan="3">
                                         <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                                                asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
 
