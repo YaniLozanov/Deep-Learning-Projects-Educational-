@@ -3,6 +3,7 @@ using CarServiceMS.Data.Interfaces;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Models.BindingModels;
 using CarServiceMS.Models.BindingModels.AdminServices;
+using CarServiceMS.Models.BindingModels.AdminServices.Users;
 using CarServiceMS.Models.CarModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -220,6 +221,46 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
                 ModelState.AddModelError("Number", "Invalid Number");
                 return this.View(carModel);
             }
+        }
+
+        public IActionResult ShowUsersDetails(string id)
+        {
+            var user = adminService.GetUserById(id);
+
+            var usersDetailModel = new UsersDetailsBindingModel()
+            {
+                Id = user.Id,
+                Username = user.UserName,
+                Email = user.Email,
+                MemberSince = user.MemberSince,
+                PersonalityDesctription = user.PersonalityDesctription,
+                PhoneNumber = user.PhoneNumber,
+                Role = user.Role
+            };
+            
+
+
+            return View(usersDetailModel);
+        }
+
+        [HttpPost]
+        public IActionResult EditPersonalityDesctription(string id, UsersDetailsBindingModel model)
+        {
+            var description = model.PersonalityDesctription;
+
+            adminService.EditPersonalityDesctription(id, description);
+
+            return RedirectToAction("ShowUsersDetails", "UsersAdmin", new { id = id});
+        }
+
+
+        public IActionResult RegisterAdmin()
+        {
+            return View();
+        }
+        public IActionResult BannUser()
+        {
+            return View();
         }
 
 

@@ -26,25 +26,19 @@
         {
             <h1 align="center" style="color: black">@Model.Username Cars</h1>
 
-            <div>
-                <table class="table-fill" style="table-layout:fixed">
-
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-                    <col width="130" />
-
+            <div  style="overflow-x:auto;">
+                <table class="table-fill" style="table-layout:auto">
 
                     <thead>
                         <tr>
-                            <th class="text-center">Brand</th>
-                            <th class="text-center">Model</th>
-                            <th class="text-center">Year</th>
-                            <th class="text-center">Number</th>
-                            <th class="text-left"></th>
-                            <th class="text-left"></th>
+
+                            <th class="text-center custom-width-180">Brand</th>
+                            <th class="text-center custom-width-100">Model</th>
+                            <th class="text-center custom-width-100">Year</th>
+                            <th class="text-center custom-width-100">Number</th>
+                            <th class="text-left custom-width-100"></th>
+                            <th class="text-left custom-width-100"></th>
+
 
                         </tr>
                     </thead>
@@ -59,9 +53,7 @@
                                 <td class="text-center">@car.YearFrom.Year</td>
                                 <td class="text-center">@car.Number</td>
                                 <td class="text-center">
-
                                     <button id="show-remove-@car.Id" onclick="showRemoveTr(@car.Id)" class="btn btn-dark button-Register">Remove</button>
-
                                 </td>
                                 <td class="text-center">
                                     <a asp-controller="UsersAdmin" asp-action="EditUsersCar" asp-route-id="@car.Id">

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace CarLibraryMS.Service
 {
@@ -52,6 +53,23 @@ namespace CarLibraryMS.Service
             var cars = this.context.Cars.ToList();
 
             return cars;
+        }
+
+        public ApplicationUser GetUserById(string id)
+        {
+            return context.Users.SingleOrDefault(user => user.Id == id);
+        }
+
+        public void EditPersonalityDesctription(string userId, string description)
+        {
+            var user = GetUserById(userId);
+
+            user.PersonalityDesctription = description;
+
+            context.Users.Update(user);
+
+            context.SaveChanges();
+
         }
     }
 }

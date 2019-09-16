@@ -38,11 +38,11 @@
                             <th colspan="2">
 
 
-                                <input  type="checkbox" id="checkbox-admin" onclick="search()">
-                                <span >Admin</span>
+                                <input style="margin-left:15px"  type="checkbox" id="checkbox-admin" onclick="search()">
+                                <span style="margin-right:40px">Admin</span>
 
                                 <input  type="checkbox" id="checkbox-user" onclick="search()">
-                                <span >User</span>
+                                <span style="margin-right:40px" >User</span>
 
                                 <input type="checkbox" id="checkbox-banned" onclick="search()">
                                 <span>Banned</span>
@@ -95,8 +95,8 @@
 
                                 <td class="text-center ">
 
-                                    <a asp-controller="UsersAdmin" asp-action="ListUserCars" asp-route-id="@user.Id" asp-route-username="@user.Username">
-                                        <button class="btn btn-dark button-Register">Cars</button>
+                                    <a asp-controller="UsersAdmin" asp-action="ShowUsersDetails" asp-route-id="@user.Id">
+                                        <button class="btn btn-dark button-Register">Details</button>
                                     </a>
 
                                 </td>

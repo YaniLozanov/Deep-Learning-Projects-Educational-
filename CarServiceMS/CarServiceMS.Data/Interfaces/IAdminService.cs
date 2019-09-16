@@ -8,9 +8,11 @@ namespace CarServiceMS.Data.Interfaces
         IList<ApplicationUser> GetAllUsers();
         IList<ApplicationUser> GetAllAdmins();
         IList<Car> GetAllCars();
-        
+        ApplicationUser GetUserById(string id);
+
 
         void ChangeUserRole(ApplicationUser user, string role);
         void DeleteAdmin();
+        void EditPersonalityDesctription(string userId, string description);
     }
 }

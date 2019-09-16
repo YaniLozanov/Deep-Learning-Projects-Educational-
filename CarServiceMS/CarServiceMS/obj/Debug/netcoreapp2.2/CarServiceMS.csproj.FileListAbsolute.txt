@@ -81,7 +81,6 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\CarServiceMS.Views.pdb
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\CarServiceMS.csproj.CopyComplete
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\RegisterAdmin.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
@@ -99,3 +98,5 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\EditUsersCar.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\CarsAdmin\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\ShowUsersDetails.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\RegisterAdmin.g.cshtml.cs
