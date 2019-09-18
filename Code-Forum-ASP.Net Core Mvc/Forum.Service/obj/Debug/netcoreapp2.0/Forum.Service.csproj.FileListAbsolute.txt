@@ -9,3 +9,15 @@ C:\Users\Wes\Projects\ProductiveDev\forum-app-demo\Forum.Service\obj\Debug\netco
 C:\Users\Wes\Projects\ProductiveDev\forum-app-demo\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.AssemblyInfo.cs
 C:\Users\Wes\Projects\ProductiveDev\forum-app-demo\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.dll
 C:\Users\Wes\Projects\ProductiveDev\forum-app-demo\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\bin\Debug\netcoreapp2.0\Forum.Service.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\bin\Debug\netcoreapp2.0\Forum.Service.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\bin\Debug\netcoreapp2.0\Forum.Service.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\bin\Debug\netcoreapp2.0\Forum.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\bin\Debug\netcoreapp2.0\Forum.Data.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Code-Forum-ASP.Net Core Mvc\Forum.Service\obj\Debug\netcoreapp2.0\Forum.Service.pdb
