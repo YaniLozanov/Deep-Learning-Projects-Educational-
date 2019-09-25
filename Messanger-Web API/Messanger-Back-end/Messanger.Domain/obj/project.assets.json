@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj",
       "projectName": "Messanger.Domain",
-      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj",
+      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj",
       "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

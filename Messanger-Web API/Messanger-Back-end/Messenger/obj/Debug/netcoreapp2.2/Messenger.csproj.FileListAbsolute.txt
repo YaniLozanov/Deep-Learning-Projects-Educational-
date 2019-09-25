@@ -17,3 +17,11 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messenger\obj\D
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messenger\obj\Debug\netcoreapp2.2\Messenger.csproj.CopyComplete
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messenger\obj\Debug\netcoreapp2.2\Messenger.dll
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messenger\obj\Debug\netcoreapp2.2\Messenger.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.RazorAssemblyInfo.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.RazorAssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messenger\obj\Debug\netcoreapp2.2\Messenger.pdb

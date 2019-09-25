@@ -6,3 +6,12 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Domai
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.AssemblyInfo.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.dll
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\bin\Debug\netcoreapp2.2\Messanger.Domain.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\bin\Debug\netcoreapp2.2\Messanger.Domain.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\bin\Debug\netcoreapp2.2\Messanger.Domain.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Messanger-Web API\Messanger-Back-end\Messanger.Domain\obj\Debug\netcoreapp2.2\Messanger.Domain.pdb

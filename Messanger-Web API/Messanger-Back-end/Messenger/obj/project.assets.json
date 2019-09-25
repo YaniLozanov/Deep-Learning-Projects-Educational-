@@ -12119,11 +12119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messenger\\Messenger.csproj",
+      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messenger\\Messenger.csproj",
       "projectName": "Messenger",
-      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messenger\\Messenger.csproj",
+      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messenger\\Messenger.csproj",
       "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messenger\\obj\\",
+      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messenger\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12142,11 +12142,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj": {
-              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj"
+            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj": {
+              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj"
             },
-            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj": {
-              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj"
+            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj": {
+              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj"
             }
           }
         }

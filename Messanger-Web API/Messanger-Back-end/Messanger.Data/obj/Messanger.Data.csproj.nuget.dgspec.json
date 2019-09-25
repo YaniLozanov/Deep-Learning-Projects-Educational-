@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj": {}
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj",
         "projectName": "Messanger.Data",
-        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\Messanger.Data.csproj",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\Messanger.Data.csproj",
         "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Data\\obj\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj": {
-                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj"
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj",
         "projectName": "Messanger.Domain",
-        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\Messanger.Domain.csproj",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\Messanger.Domain.csproj",
         "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web API\\Messanger-Back-end\\Messanger.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
