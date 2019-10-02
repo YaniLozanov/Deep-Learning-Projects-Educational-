@@ -18,12 +18,12 @@ namespace CarLibraryMS.Service
             this.context = context;
         }
 
-        public void ChangeUserRole(ApplicationUser user, string role)
+        public async Task ChangeUserRole(ApplicationUser user, string role)
         {
             user.Role = role;
 
             this.context.Users.Update(user);
-            this.context.SaveChangesAsync();
+           await this.context.SaveChangesAsync();
         }
 
         public void DeleteAdmin()
@@ -41,6 +41,27 @@ namespace CarLibraryMS.Service
 
             return admins;
         }
+        public IList<ApplicationUser> GetAllBannedUsers()
+        {
+            var usersRoleId = this.context.Roles.FirstOrDefault(role => role.Name == "Banned").Id;
+
+            var usersIds = this.context.UserRoles.Where(x => x.RoleId == usersRoleId).Select(x => x.UserId);
+
+            var users = this.context.User.Where(x => usersIds.Contains(x.Id)).ToList();
+
+            return users;
+        }
+
+        public IList<ApplicationUser> GetAllOrinaryUsers()
+        {
+            var usersRoleId = this.context.Roles.FirstOrDefault(role => role.Name == "User").Id;
+
+            var usersIds = this.context.UserRoles.Where(x => x.RoleId == usersRoleId).Select(x => x.UserId).ToList();
+
+            var users = this.context.User.Where(x => usersIds.Contains(x.Id)).ToList();
+
+            return users;
+        }
 
         public IList<ApplicationUser> GetAllUsers()
         {
@@ -50,7 +71,10 @@ namespace CarLibraryMS.Service
         }
         public IList<Car> GetAllCars()
         {
-            var cars = this.context.Cars.ToList();
+            var cars = this.context.Cars.
+                Include(car => car.Owner)
+                .ThenInclude(owner => owner.Cars)
+                .ToList();
 
             return cars;
         }

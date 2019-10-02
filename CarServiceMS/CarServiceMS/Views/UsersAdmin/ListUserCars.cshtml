@@ -15,19 +15,17 @@
     <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
 </head>
 
-<body>
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%">
 
 
-    <div class="table-title">
-    </div>
     @if (@Model.Cars != null)
     {
         @if (Model.Cars.Any())
         {
-            <h1 align="center" style="color: black">@Model.Username Cars</h1>
+            <h1 align="center" class="h1-show-cars border">@Model.Username Cars</h1>
 
-            <div  style="overflow-x:auto;">
-                <table class="table-fill" style="table-layout:auto">
+            <div style="overflow-x:auto;">
+                <table class="table-fill border" style="table-layout:auto">
 
                     <thead>
                         <tr>
@@ -97,29 +95,31 @@
         }
         else
         {
-            <h1 align="center">@Model.Username does not have any cars!</h1>
+            <h1  align="center" class="h1-show-cars border">@Model.Username does not have any cars!</h1>
 
         }
     }
     else
     {
 
-        <h1 align="center">@Model.Username does not have any cars!</h1>
+        <h1  align="center" class="h1-show-cars border">@Model.Username does not have any cars!</h1>
     }
 
-    <div style="padding:20px" class="text-center">
+<div style="padding:20px; background:#FFFFFF" class=" border-top-grey text-center ">
+    <div style="padding:5px" class="text-center">
 
         <a asp-controller="UsersAdmin" asp-action="CreateUsersCar" asp-route-username="@Model.Username">
             <button class="btn btn-dark button-Register">Add Car</button>
         </a>
     </div>
 
-    <div style="padding:20px" class="text-center">
+    <div style="padding:5px" class="text-center">
 
-        <a asp-controller="UsersAdmin" asp-action="ListUsers">
+        <a asp-controller="UsersAdmin" asp-action="ShowUsersDetails" asp-route-id="@Model.UserId"> 
             <button class="btn btn-dark button-Register">Back</button>
         </a>
     </div>
+</div>
 </body>
 
 

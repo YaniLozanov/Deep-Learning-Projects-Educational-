@@ -1,0 +1,59 @@
+﻿@model CarServiceMS.Models.BindingModels.AdminBindingModel
+
+@{
+    ViewData["Title"] = "Make User";
+
+}
+
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%">
+
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-lg-6">
+            <div align="center" class="row box" style="border-radius: 3%">
+
+                <div align="center" class="center" style=" width:80% !important; margin-top:10%; ">
+                    <h1 align="center">@ViewData["Title"]</h1>
+                    <section>
+                        <form asp-controller="Admin" asp-action="MakeUser" method="post">
+                            <hr class="hr" />
+
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Username"></label>
+                                <input asp-for="Username" class="form-control input" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SecretPassword"></label>
+                                <input asp-for="SecretPassword" class="form-control input" />
+                                <span asp-validation-for="SecretPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="button_Dark">Make User</button>
+                            </div>
+                        </form>
+                        <div style="padding:5px" class="text-center">
+
+                            <a asp-controller="UsersAdmin" asp-action="ShowUsersDetails" asp-route-id="@Model.UserId">
+                                <button class="btn btn-dark button-Register">Back</button>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</body>
+<
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+

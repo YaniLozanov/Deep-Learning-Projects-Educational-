@@ -33,7 +33,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
             this.carService = carService;
         }
 
-
+        [HttpGet]
         public IActionResult ListUsers()
         {
             var users = this.adminService
@@ -57,6 +57,8 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
 
             return this.View(viewUsers);
         }
+
+        [HttpGet]
         public IActionResult ListUserCars(string id, string username)
         {
             var carsFromDb = this.carService.GetAllCars(id);
@@ -76,7 +78,8 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
                 var carsBinding = new UsersCarsListingModel()
                 {
                     Cars = cars,
-                    Username = username
+                    Username = username,
+                    UserId = id
                 };
 
                 return this.View(carsBinding);
@@ -87,6 +90,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
             }
         }
 
+        [HttpGet]
         public IActionResult CreateUsersCar(string username)
         {
 
@@ -166,6 +170,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
             }
         }
 
+        [HttpGet]
         public IActionResult EditUsersCar(int id)
         {
             var car = carService.GetCarById(id);
@@ -223,6 +228,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
             }
         }
 
+        [HttpGet]
         public IActionResult ShowUsersDetails(string id)
         {
             var user = adminService.GetUserById(id);
@@ -253,15 +259,6 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
             return RedirectToAction("ShowUsersDetails", "UsersAdmin", new { id = id});
         }
 
-
-        public IActionResult RegisterAdmin()
-        {
-            return View();
-        }
-        public IActionResult BannUser()
-        {
-            return View();
-        }
 
 
     }

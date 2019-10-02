@@ -11,6 +11,9 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
 }
+.navbar-default {
+    background: #000000;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -51,6 +54,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    
 }
 
 .footer {
@@ -114,3 +118,50 @@ body {
 .selector-style {
     font-family: "Roboto", helvetica, arial, sans-serif;
 }
+
+
+
+.navbar-light .navbar-toggler-icon {
+    color:grey;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(9,55,244, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-dark {
+    background-color: black !important;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    padding-top: 0px;
+    opacity: 0.95 !important;
+    background: rgba(255,255,255,0.9);
+}
+
+.h1-show-cars {
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    color: #D5DDE5;
+    background-color: #1B1E24;
+    margin: 0px;
+    padding: 2%;
+}
+
+.border-top-grey {
+    border-top: 4px solid #9ea7af;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    -ms-overflow-style: none;
+    // IE 10+ scrollbar-width: none;
+    // Firefox
+}
+
+    .container::-webkit-scrollbar {
+        display: none;
+        // Safari and Chrome
+    }

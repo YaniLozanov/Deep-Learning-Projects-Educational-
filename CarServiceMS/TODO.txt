@@ -1,7 +1,0 @@
-0. Make buttons under the Role Field!!!
-1. Admin Register page styling.
-2. Users Detail Page buttons dependency: if it is an Admin => ban and user, if it is a User => admin and bann, if it is an Banned => Admin and User
-3. Bann Button must be Red.
-4. Bann functionallity.
-5. User functionallity.
-6. Make button: Show Cars.

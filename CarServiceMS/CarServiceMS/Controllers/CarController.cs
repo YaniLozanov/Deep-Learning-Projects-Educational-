@@ -23,14 +23,14 @@ namespace CarServiceMS.Controllers
             this.userManager = userManager;
         }
 
+        
         [Authorize(Roles = "Admin, User")]
+        [HttpGet]
         public IActionResult Create()
         {
             return this.View();
         }
-
         [Authorize(Roles = "Admin, User")]
-
         [HttpPost]
         public IActionResult Create(CarBindingModel carModel)
         {
@@ -60,6 +60,7 @@ namespace CarServiceMS.Controllers
         }
 
         [Authorize(Roles = "Admin, User")]
+        [HttpGet]
         public IActionResult ShowCars()
         {
             var user = this.carService.GetUserByName(this.User.Identity.Name);
@@ -127,7 +128,9 @@ namespace CarServiceMS.Controllers
             }
         }
 
+        
         [Authorize(Roles = "Admin, User")]
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             var carFromDb = this.carService.GetCarById(id);

@@ -10,6 +10,8 @@ namespace CarServiceMS.Models.BindingModels.AdminServices
 
         public string  Username { get; set; }
 
+        public string UserId { get; set; }
+
 
         [Required]
         public int Id { get; set; }

@@ -7,6 +7,9 @@ namespace CarServiceMS.Models.BindingModels
     public class AdminBindingModel
     {
         [Required]
+        public string UserId { get; set; }
+
+        [Required]
         public string Username { get; set; }
 
         [Required]

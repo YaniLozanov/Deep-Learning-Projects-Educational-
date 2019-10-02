@@ -5,123 +5,140 @@
 @{
 }
 
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%">
+    <h1 align="center" class="h1-show-cars border">@Model.Username Profile Details</h1>
 
-<h1 style="padding-bottom:20px" class="text-center">@Model.Username Profile Details</h1>
 
 
-<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container">
+        <div class="row box" style="border-bottom-right-radius: 1%;border-bottom-left-radius: 1%; padding-top:3%;">
+            <div class="col">
 
-            <div class="form-group w-45">
-                <div class="d-flex justify-content-center">
-                    <label asp-for="Username" class="font-weight-bold"></label>
+                <div class="form-group w-45">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="Username" class="font-weight-bold"></label>
+                    </div>
+                    <input asp-for="Username" class="form-control border-dark" disabled style="text-align:center; background:white;" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
                 </div>
-                <input asp-for="Username" class="form-control" disabled style="text-align:center" />
-                <span asp-validation-for="Username" class="text-danger"></span>
-            </div>
-            <div class="form-group w-45">
-                <div class="d-flex justify-content-center">
-                    <label asp-for="Email" class="font-weight-bold"></label>
+                <div class="form-group w-45">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="Email" class="font-weight-bold"></label>
+                    </div>
+                    <input asp-for="Email" class="form-control border-dark" type="text" placeholder="Model..." disabled style="text-align:center; background:white;" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-                <input asp-for="Email" class="form-control" type="text" placeholder="Model..." disabled style="text-align:center" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group w-45">
-                <div class="d-flex justify-content-center">
-                    <label asp-for="PhoneNumber" class="font-weight-bold">Phone Number</label>
+                <div class="form-group w-45">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="PhoneNumber" class="font-weight-bold">Phone Number</label>
+                    </div>
+                    <input asp-for="PhoneNumber" class="form-control border-dark" placeholder="Year..." disabled style="text-align:center; background:white;" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
-                <input asp-for="PhoneNumber" class="form-control" placeholder="Year..." disabled style="text-align:center" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group w-45">
-                <div class="d-flex justify-content-center">
-                    <label asp-for="MemberSince" class="font-weight-bold">Member Since</label>
+                <div class="form-group w-45">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="MemberSince" class="font-weight-bold">Member Since</label>
+                    </div>
+                    <input asp-for="MemberSince" class="form-control border-dark" type="text" disabled style="text-align:center; background:white;" />
+                    <span asp-validation-for="MemberSince" class="text-danger"></span>
+                </div>        
+                <div class="form-group w-45">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="Role" class="font-weight-bold"></label>
+                    </div>
+                    <input asp-for="Role" class="form-control border-dark" type="text" disabled style="text-align:center; background:white;" />
+                    <span asp-validation-for="Role" class="text-danger"></span>
                 </div>
-                <input asp-for="MemberSince" class="form-control" type="text" disabled style="text-align:center" />
-                <span asp-validation-for="MemberSince" class="text-danger"></span>
-            </div>
-            <div class="form-group w-45">
-                <div class="d-flex justify-content-center">
-                    <label asp-for="Role" class="font-weight-bold"></label>
-                </div>
-                <input asp-for="Role" class="form-control" type="text" disabled style="text-align:center" />
-                <span asp-validation-for="Role" class="text-danger"></span>
-            </div>
-            <div class="form-group w-45">
+                <div class="form-group w-45">
 
-                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
 
 
-                    @if (Model.Role == "Admin")
-                    {
-                        <a asp-controller="UsersAdmin" asp-action="RegisterAdmin">
-                            <button id="btn-cancel" class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">User</button>
+                        @if (Model.Role == "Admin")
+                        {
+                            <a asp-controller="Admin" asp-action="MakeUser" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">User</button>
+                            </a>
+
+                            <a asp-controller="Admin" asp-action="BanUser" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-danger button-Register" onclick="cancelDescriptionEditing()">Bann</button>
+                            </a>
+                        }
+                        else if (Model.Role == "User")
+                        {
+                            <a asp-controller="Admin" asp-action="RegisterAdmin" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Admin</button>
+                            </a>
+
+                            <a asp-controller="Admin" asp-action="BanUser" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-danger button-Register" onclick="cancelDescriptionEditing()">Bann</button>
+                            </a>
+                        }
+                        else if (Model.Role == "Banned")
+                        {
+                            <a asp-controller="Admin" asp-action="RegisterAdmin" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Admin</button>
+                            </a>
+                            <a asp-controller="Admin" asp-action="MakeUser" asp-route-username="@Model.Username" asp-route-userId="@Model.Id">
+                                <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">User</button>
+                            </a>
+                        }
+
+                         
+                    </div>
+                    <div class="d-flex justify-content" style="padding-top:10px">
+                        <a asp-controller="UsersAdmin" asp-action="ListUsers">
+                            <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Back</button>
+                        </a>
+                        <a style="padding-left:34%" asp-controller="UsersAdmin" asp-action="ListUserCars" asp-route-username="@Model.Username" asp-route-id="@Model.Id">
+                            <button class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Cars</button>
                         </a>
 
-                        <button id="btn-cancel" class="btn btn-danger button-Register" onclick="cancelDescriptionEditing()">Bann</button>
-                    }
-                    else if (Model.Role == "User")
-                    {
-                        <a asp-controller="UsersAdmin" asp-action="RegisterAdmin">
-                            <button id="btn-cancel" class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Admin</button>
-                        </a>
-
-                        <button id="btn-cancel" class="btn btn-danger button-Register" onclick="cancelDescriptionEditing()">Bann</button>
-                    }
-                    else if (Model.Role == "Banned")
-                    {
-                        <a asp-controller="UsersAdmin" asp-action="RegisterAdmin">
-                            <button id="btn-cancel" class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()">Admin</button>
-                        </a>
-
-                        <button id="btn-cancel" class="btn btn-danger button-Register" onclick="cancelDescriptionEditing()">User</button>
-                    }
-
+                    </div>
 
                 </div>
             </div>
+         
+            <div class="col">
 
+                <div class="d-flex justify-content-center">
+                    <label asp-for="PersonalityDesctription" class="font-weight-bold">Personality Desctription</label>
+                </div>
+
+                <div class="container border-dark" style="overflow-x:auto;">
+                    <div style="width: 30em; word-wrap: break-word;">
+                        <span id="span-description" style="display:inherit; padding-bottom:20px; padding-left: 20px;">@Model.PersonalityDesctription</span>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button id="btn-edit" class="btn btn-dark button-Register" onclick="editDescription()">Edit Description</button>
+                </div>
+
+                <form asp-controller="UsersAdmin" asp-action="EditPersonalityDesctription" asp-route-id="@Model.Id" method="post">
+                    <textarea id="textarea-description" asp-for="PersonalityDesctription" class="form-control" placeholder="Description" style="min-height:200px; max-height:300px; display:none">@Model.PersonalityDesctription</textarea>
+                    <div style="text-align:center">
+                        <span id="validation-span" asp-validation-for="PersonalityDesctription" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-center" style="padding:10px">
+                        <button id="btn-confirm" type="submit" class="btn btn-dark button-Register" style="display:none">Confirm</button>
+                    </div>
+                </form>
+
+                <div class="d-flex justify-content-center">
+                    <button id="btn-cancel" class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()" style="display:none">Cancel</button>
+                </div>
+
+            </div>
 
         </div>
-        <div class="col">
-
-            <div class="d-flex justify-content-center">
-                <label asp-for="PersonalityDesctription" class="font-weight-bold">Personality Desctription</label>
-            </div>
-
-            <div class="container" style="overflow-x:auto;">
-                <div style="width: 30em; word-wrap: break-word;">
-                    <span id="span-description" style="display:inherit; padding-bottom:20px; padding-left: 20px;">@Model.PersonalityDesctription</span>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <button id="btn-edit" class="btn btn-dark button-Register" onclick="editDescription()">Edit Description</button>
-            </div>
-
-            <form asp-controller="UsersAdmin" asp-action="EditPersonalityDesctription" asp-route-id="@Model.Id" method="post">
-                <textarea id="textarea-description" asp-for="PersonalityDesctription" class="form-control" placeholder="Description" style="min-height:200px; max-height:300px; display:none">@Model.PersonalityDesctription</textarea>
-                <div style="text-align:center">
-                    <span id="validation-span" asp-validation-for="PersonalityDesctription" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex justify-content-center" style="padding:10px">
-                    <button id="btn-confirm" type="submit" class="btn btn-dark button-Register" style="display:none">Confirm</button>
-                </div>
-            </form>
-
-            <div class="d-flex justify-content-center">
-                <button id="btn-cancel" class="btn btn-dark button-Register" onclick="cancelDescriptionEditing()" style="display:none">Cancel</button>
-            </div>
-
-        </div>
-
+        <input asp-for="Id" type="hidden" />
+        
     </div>
-</div>
-<input asp-for="Id" type="hidden" />
-
+   
+</body>
 
 
 <script>
@@ -139,6 +156,8 @@
     function editDescription() {
         descriptionSpan.style.display = "none";
         descriptionTextarea.style.display = "block";
+
+        console.log(btnCancel);
 
         btnEdit.style.display = "none";
         btnConfirm.style.display = "block";

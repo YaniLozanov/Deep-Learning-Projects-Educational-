@@ -14,23 +14,25 @@
     <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
 </head>
 
-<body>
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%;">
 
 
 
     @if (@Model.Users != null)
     {
-        @if (Model.Users.Any(user => user.Role == "User"))
+        @if (Model.Users.Any(user => user.Role == "User") ||
+            Model.Users.Any(user => user.Role == "Banned") ||
+            Model.Users.Any(user => user.Role == "Admin" && user.Username != this.User.Identity.Name))
         {
 
-            <h1 align="center" style="color: black">Users</h1>
+            <h1 align="center" class="h1-show-cars border">Users</h1>
 
             <div style="overflow-x:auto;">
-                <table class="table-fill" style="table-layout:auto;">
+                <table class="table-fill border" style="table-layout:auto;">
 
-                    <thead >
+                    <thead>
                         <tr>
-                            <th  class="text-center" colspan="2">
+                            <th class="text-center" colspan="2">
                                 <input id="search-box" class="form-control input" onkeyup="search()" type="text" placeholder="Search..." />
                             </th>
 
@@ -38,11 +40,11 @@
                             <th colspan="2">
 
 
-                                <input style="margin-left:15px"  type="checkbox" id="checkbox-admin" onclick="search()">
+                                <input style="margin-left:15px" type="checkbox" id="checkbox-admin" onclick="search()">
                                 <span style="margin-right:40px">Admin</span>
 
-                                <input  type="checkbox" id="checkbox-user" onclick="search()">
-                                <span style="margin-right:40px" >User</span>
+                                <input type="checkbox" id="checkbox-user" onclick="search()">
+                                <span style="margin-right:40px">User</span>
 
                                 <input type="checkbox" id="checkbox-banned" onclick="search()">
                                 <span>Banned</span>
@@ -117,7 +119,15 @@
     {
         <h1 align="center">There are no users!</h1>
     }
+    <div style="padding:20px; background:#FFFFFF" class=" border-top-grey text-center ">
 
+        <div style="padding:5px" class="text-center">
+    
+            <a asp-controller="Admin" asp-action="AdminServices">
+                <button class="btn btn-dark button-Register">Back</button>
+            </a>
+        </div>
+    </div>
 </body>
 
 

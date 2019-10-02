@@ -99,4 +99,8 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Ca
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\CarsAdmin\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\ShowUsersDetails.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\UsersAdmin\RegisterAdmin.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\RegisterAdmin.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\BanUser.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\Admin\MakeUser.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\CarServiceMS\obj\Debug\netcoreapp2.2\Razor\Views\CarsAdmin\Edit.g.cshtml.cs

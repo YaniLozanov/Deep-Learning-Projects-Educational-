@@ -18,11 +18,13 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         [BindProperty]
@@ -37,10 +39,10 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]            
+            [Required]
             [MinLength(4, ErrorMessage = "The Username must be at least 4 characters long.")]
             [MaxLength(10, ErrorMessage = "The Username must be maximum 10 characters long.")]
-            [RegularExpression("^([A-Z]{1}([a-z0-9_]+))[a-z0-9]$", ErrorMessage = "Incorrect format!")]
+            [RegularExpression("^([A-Z]{1}([a-z0-9_A-Z]+))[a-z0-9A-Z]$", ErrorMessage = "Incorrect format!")]
             public string Username { get; set; }
 
             [Required]
@@ -79,8 +81,19 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Username, Input.Password, Input.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    var user = await _userManager.FindByNameAsync(Input.Username);
+                    if (user.Role != "Banned")
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return LocalRedirect(returnUrl);
+                    }
+                    else
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return RedirectToPage("AccessDenied");
+
+                    }
+
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -90,6 +103,7 @@ namespace CarServiceMS.Areas.Identity.Pages.Account
                 {
                     _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
+
                 }
                 else
                 {

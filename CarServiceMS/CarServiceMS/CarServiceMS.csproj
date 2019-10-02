@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="Models\BindingModels\AdminServices\Profit\" />
+    <Folder Include="wwwroot\css\NewFolder\" />
   </ItemGroup>
 
 </Project>

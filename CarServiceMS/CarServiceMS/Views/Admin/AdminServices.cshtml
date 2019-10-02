@@ -22,10 +22,14 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%;">
+    <h1 class="h1-show-cars border" align="center">Admin Services</h1>
+    
     <div>
-        <section class="pricing-section bg-1">
+        <section class="pricing-section bg-1" style="padding:0px; background: rgba(255,255,255,0.9); border-bottom-left-radius:1%;  border-bottom-left-radius:1%">
+
             <div class="pricing pricing--sonam">
+
                 <div class="pricing__item">
 
                     <h3 class="pricing__title">Users</h3>
@@ -39,8 +43,6 @@
                         <li class="pricing__feature ">Оrdinary: <span class="span-li">@Model.UsersData.OrdinaryCount</span></li>
                         <li style="background-color:#29272b" class="pricing__feature ">Admins: <span class="span-li">@Model.UsersData.AdminsCount</span></li>
                         <li class="pricing__feature ">Banned: <span class="span-li">@Model.UsersData.BannedCount</span></li>
-
-
 
                     </ul>
 
@@ -94,6 +96,12 @@
 
                 </div>
 
+            </div>
+            <div style="padding:5px" class="text-center">
+
+                <a asp-controller="Home" asp-action="Index" >
+                    <button class="btn btn-dark button-Register">Back</button>
+                </a>
             </div>
         </section>
     </div>

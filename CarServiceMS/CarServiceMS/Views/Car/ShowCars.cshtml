@@ -15,19 +15,16 @@
     <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
 </head>
 
-<body>
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100% ">
 
-
-    <div class="table-title">
-    </div>
     @if (@Model.Cars != null)
     {
         @if (Model.Cars.Any())
         {
-            <h1 align="center" style="color: black">My Cars</h1>
+            <h1 class="border h1-show-cars" align="center" >My Cars</h1>
 
             <div style="overflow-x:auto;">
-                <table class="table-fill" style="table-layout:auto">
+                <table class="table-fill border" style="table-layout:auto">
 
                     <thead>
                         <tr>
@@ -66,7 +63,7 @@
                                 <form asp-controller="Car" asp-action="Remove" method="post">
                                     <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
 
-                                    <td class="text-center" colspan="1" >
+                                    <td class="text-center" colspan="1">
                                         <span>Your Password:</span>
                                     </td>
                                     <td class="text-center" colspan="3">
@@ -107,7 +104,7 @@
         <h1 align="center">You do not have any cars!</h1>
     }
 
-    <div style="padding:20px" class="text-center">
+    <div style="padding:20px; background:#FFFFFF" class=" border-top-grey text-center ">
 
         <a asp-controller="Car" asp-action="Create">
             <button class="btn btn-dark button-Register">Add Your Car</button>

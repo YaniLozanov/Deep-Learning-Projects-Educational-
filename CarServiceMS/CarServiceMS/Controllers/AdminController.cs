@@ -32,36 +32,196 @@ namespace CarServiceMS.Controllers
             this.carService = carService;
         }
 
-        public IActionResult RegisterAdmin()
+        [HttpGet]
+        public IActionResult RegisterAdmin(string username, string userId)
         {
-            return View();
+            var model = new AdminBindingModel()
+            {
+                Username = username,
+                UserId = userId
+               
+            };
+
+            return View(model);
         }
         [HttpPost]
         public async Task<IActionResult> RegisterAdmin(AdminBindingModel adminInputModel)
         {
-            var adminUser = await this.context.Users.SingleOrDefaultAsync(user => user.UserName == this.User.Identity.Name);
+            var adminUser = await this.context.Users.SingleOrDefaultAsync(userFromDb => userFromDb.UserName == this.User.Identity.Name);
 
             var validPassword = await userManager.CheckPasswordAsync(adminUser, adminInputModel.SecretPassword);
 
-            if (ModelState.IsValid && validPassword)
+            var user = await userManager.FindByNameAsync(adminInputModel.Username);
+
+
+            if (ModelState.IsValid && validPassword && user != null)
             {
-                var admin = await userManager.FindByNameAsync(adminInputModel.Username);
 
                 if (!await roleManager.RoleExistsAsync("Admin"))
                 {
                     await roleManager.CreateAsync(new IdentityRole("Admin"));
                 }
 
-                await userManager.AddToRoleAsync(admin, "Admin");
-                adminService.ChangeUserRole(admin, "Admin");
 
-                return RedirectToAction("Index", "Home");
+                if (await userManager.IsInRoleAsync(user, "Banned"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "Banned");
+
+                }
+                else if (await userManager.IsInRoleAsync(user, "User"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "User");
+
+                }
+
+                await userManager.AddToRoleAsync(user, "Admin");
+                await adminService.ChangeUserRole(user, "Admin");
+
+                return RedirectToAction("ShowUsersDetails", "UsersAdmin", new { id = user.Id });
             }
             else
             {
+                if (user == null)
+                {
+                    ModelState.AddModelError("Username", "There is no such user!");
+
+                }
+                else if (validPassword == false)
+                {
+                    ModelState.AddModelError("Password", "Invalid Passowrd!");
+
+                }
+
                 return this.View();
             }
         }
+
+        [HttpGet]
+        public IActionResult BanUser(string username, string userId)
+        {
+            var model = new AdminBindingModel()
+            {
+                Username = username,
+                UserId = userId
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> BanUser(AdminBindingModel adminInputModel)
+        {
+            var adminUser = await this.context.Users.SingleOrDefaultAsync(userFromDb => userFromDb.UserName == this.User.Identity.Name);
+
+            var validPassword = await userManager.CheckPasswordAsync(adminUser, adminInputModel.SecretPassword);
+
+            var user = await userManager.FindByNameAsync(adminInputModel.Username);
+
+
+            if (ModelState.IsValid && validPassword && user != null)
+            {
+
+                if (!await roleManager.RoleExistsAsync("Banned"))
+                {
+                    await roleManager.CreateAsync(new IdentityRole("Banned"));
+                }
+
+
+                if (await userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "Admin");
+
+                }
+                else if(await userManager.IsInRoleAsync(user, "User"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "User");
+
+                }
+
+                await userManager.AddToRoleAsync(user, "Banned");
+                await adminService.ChangeUserRole(user, "Banned");
+                return RedirectToAction("ShowUsersDetails", "UsersAdmin", new { id = user.Id });
+            }
+            else
+            {
+                if (user == null)
+                {
+                    ModelState.AddModelError("Username", "There is no such user!");
+
+                }
+                else if (validPassword == false)
+                {
+                    ModelState.AddModelError("Password", "Invalid Passowrd!");
+
+                }
+
+                return this.View();
+            }
+        }
+
+        [HttpGet]
+        public IActionResult MakeUser(string username, string userId)
+        {
+            var model = new AdminBindingModel()
+            {
+                Username = username,
+                UserId = userId
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> MakeUser(AdminBindingModel adminInputModel)
+        {
+            var adminUser = await this.context.Users.SingleOrDefaultAsync(userFromDb => userFromDb.UserName == this.User.Identity.Name);
+
+            var validPassword = await userManager.CheckPasswordAsync(adminUser, adminInputModel.SecretPassword);
+
+            var user = await userManager.FindByNameAsync(adminInputModel.Username);
+
+
+            if (ModelState.IsValid && validPassword && user != null)
+            {
+
+                if (!await roleManager.RoleExistsAsync("User"))
+                {
+                    await roleManager.CreateAsync(new IdentityRole("User"));
+                }
+
+
+                if (await userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "Admin");
+
+                }
+                else if (await userManager.IsInRoleAsync(user, "Banned"))
+                {
+                    await userManager.RemoveFromRoleAsync(user, "Banned");
+
+                }
+
+                await userManager.AddToRoleAsync(user, "User");
+                await adminService.ChangeUserRole(user, "User");
+
+                return RedirectToAction("ShowUsersDetails", "UsersAdmin", new { id = user.Id });
+            }
+            else
+            {
+                if (user == null)
+                {
+                    ModelState.AddModelError("Username", "There is no such user!");
+
+                }
+                else if (validPassword == false)
+                {
+                    ModelState.AddModelError("Password", "Invalid Passowrd!");
+
+                }
+
+                return this.View();
+            }
+        }
+
+        [HttpGet]
         public IActionResult AdminServices()
         {
 
@@ -69,8 +229,8 @@ namespace CarServiceMS.Controllers
 
 
             var adminsCount = this.adminService.GetAllAdmins().Count();
-            var bannedCount = 0;
-            var ordinaryUseres = totalUsersCount - adminsCount - bannedCount;
+            var bannedCount = this.adminService.GetAllBannedUsers().Count();
+            var ordinaryUseres = this.adminService.GetAllOrinaryUsers().Count();
 
             var usersData = new UsersDataBindingModel()
             {
