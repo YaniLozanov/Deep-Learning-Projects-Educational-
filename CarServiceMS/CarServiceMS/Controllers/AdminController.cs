@@ -19,17 +19,15 @@ namespace CarServiceMS.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly IAdminService adminService;
-        private readonly ICarService carService;
+
 
         public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
-                               RoleManager<IdentityRole> roleManager, IAdminService adminService,
-                               ICarService carService)
+                               RoleManager<IdentityRole> roleManager, IAdminService adminService)
         {
             this.context = context;
             this.userManager = userManager;
             this.roleManager = roleManager;
             this.adminService = adminService;
-            this.carService = carService;
         }
 
         [HttpGet]
@@ -172,7 +170,7 @@ namespace CarServiceMS.Controllers
         [HttpPost]
         public async Task<IActionResult> MakeUser(AdminBindingModel adminInputModel)
         {
-            var adminUser = await this.context.Users.SingleOrDefaultAsync(userFromDb => userFromDb.UserName == this.User.Identity.Name);
+            var adminUser =  this.context.Users.SingleOrDefault(userFromDb => userFromDb.UserName == this.User.Identity.Name);
 
             var validPassword = await userManager.CheckPasswordAsync(adminUser, adminInputModel.SecretPassword);
 
@@ -259,7 +257,6 @@ namespace CarServiceMS.Controllers
 
             return this.View(usersCarsProfits);
         }
-
 
 
     }

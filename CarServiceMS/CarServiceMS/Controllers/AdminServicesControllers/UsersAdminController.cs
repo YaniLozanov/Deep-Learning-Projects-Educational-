@@ -23,8 +23,8 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
         private readonly ICarService carService;
 
         public UsersAdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
-                               RoleManager<IdentityRole> roleManager, IAdminService adminService,
-                               ICarService carService)
+                                    RoleManager<IdentityRole> roleManager, IAdminService adminService,
+                                    ICarService carService)
         {
             this.context = context;
             this.userManager = userManager;

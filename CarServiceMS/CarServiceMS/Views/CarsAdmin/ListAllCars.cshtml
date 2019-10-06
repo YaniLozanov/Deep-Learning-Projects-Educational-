@@ -41,8 +41,8 @@
                         <th class="text-center" colspan="2">
                             <select class="browser-default custom-select" id="search-selector">
 
-                                <option value="Model">Model</option>
                                 <option value="Brand">Brand</option>
+                                <option value="Model">Model</option>
                                 <option value="YearFrom">Year From</option>
                                 <option value="Number">Number</option>
                                 <option value="Owner">Owner</option>
@@ -78,8 +78,8 @@
                     @foreach (var car in this.Model.Cars)
                     {
                         <tr>
-                            <td name="Brand" class="text-center">@car.Brand</td>
                             <td name="Model" class="text-center">@car.Model</td>
+                            <td name="Brand" class="text-center">@car.Brand</td>
                             <td name="YearFrom" class="text-center">@car.YearFrom.ToShortDateString()</td>
                             <td name="Number" class="text-center ">@car.Number</td>
                             <td name="Owner" class="text-center">@car.Owner.UserName</td>

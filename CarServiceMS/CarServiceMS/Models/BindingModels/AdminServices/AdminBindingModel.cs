@@ -6,7 +6,7 @@ namespace CarServiceMS.Models.BindingModels
     [Authorize(Roles = "Admin")]
     public class AdminBindingModel
     {
-        [Required]
+       
         public string UserId { get; set; }
 
         [Required]

@@ -1,5 +1,4 @@
-﻿using CarServiceMS.Data;
-using CarServiceMS.Data.Interfaces;
+﻿using CarServiceMS.Data.Interfaces;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Models.BindingModels;
 using CarServiceMS.Models.BindingModels.AdminServices;
@@ -15,19 +14,15 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
     [Authorize(Roles = "Admin")]
     public class CarsAdminController : Controller
     {
-        private readonly ApplicationDbContext context;
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
         private readonly IAdminService adminService;
         private readonly ICarService carService;
 
-        public CarsAdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
-                               RoleManager<IdentityRole> roleManager, IAdminService adminService,
-                               ICarService carService)
+        public CarsAdminController( UserManager<ApplicationUser> userManager,
+                                    IAdminService adminService,
+                                    ICarService carService)
         {
-            this.context = context;
             this.userManager = userManager;
-            this.roleManager = roleManager;
             this.adminService = adminService;
             this.carService = carService;
         }
@@ -118,19 +113,13 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
         [HttpPost]
         public IActionResult Edit(EditCarBindingModel carModel)
         {
-
-
-
             if (this.ModelState.IsValid)
             {
                 var car = this.carService.GetCarById(carModel.Id);
 
-
                 car.Brand = carModel.Brand;
                 car.Model = carModel.Model;
                 car.YearFrom = carModel.YearFrom;
-
-
 
                 if (car.Number != carModel.Number)
                 {
