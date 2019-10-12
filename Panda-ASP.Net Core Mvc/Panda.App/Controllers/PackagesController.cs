@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Panda.App.Models.Package;
-using Panda.Data;
+using Panda.App.Models.Recipients;
 using Panda.Domain;
 using Panda.Services;
 using System;
@@ -11,6 +10,7 @@ using System.Linq;
 
 namespace Panda.App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PackagesController : Controller
     {
         private readonly IUsersService usersService;
@@ -24,16 +24,16 @@ namespace Panda.App.Controllers
             this.receiptsService = receiptsService;            
         }
 
-        [Authorize(Roles = "Admin")]
+        [HttpGet]
         public IActionResult Create()
         {
-            this.ViewData["Recipients"] = this.usersService.GetAllUsers();
+            ViewBag.Recipients = usersService.GetAllUsers();
+
 
             return this.View(new PackageCreateBindingModel());
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public IActionResult Create(PackageCreateBindingModel bindingModel)
         {
             if(!this.ModelState.IsValid)
@@ -50,7 +50,7 @@ namespace Panda.App.Controllers
                 Status = this.packagesService.GetPackageStatus("Pending")
             };
 
-            this.packagesService.CreatePackage(package);
+            this.packagesService.AddPackage(package);
 
             return this.Redirect("/Packages/Pending");
         }
@@ -87,7 +87,6 @@ namespace Panda.App.Controllers
         }
 
         [HttpGet("/Packages/Ship/{id}")]
-        [Authorize(Roles = "Admin")]
         public IActionResult Ship(string id)
         {
             Package package = this.packagesService.GetPackage(id);
@@ -99,11 +98,11 @@ namespace Panda.App.Controllers
         }
 
         [HttpGet("/Packages/Deliver/{id}")]
-        [Authorize(Roles = "Admin")]
         public IActionResult Deliver(string id)
         {
             Package package = this.packagesService.GetPackage(id);
             package.Status = this.packagesService.GetPackageStatus("Delivered");
+            package.EstimatedDeliveryDate = DateTime.UtcNow;
             this.packagesService.UpdatePackage(package);
 
             return this.Redirect("/Packages/Delivered");
@@ -125,67 +124,101 @@ namespace Panda.App.Controllers
                 Recipient = this.usersService.GetUser(this.User.Identity.Name)
             };
 
-            this.receiptsService.CreateReceipt(receipt);
+            this.receiptsService.AddReceipt(receipt);
 
             return this.Redirect("/Home/Index");
         }
 
-
         [HttpGet]
-        [Authorize(Roles = "Admin")]
         public IActionResult Pending()
         {
-            return this.View(this.packagesService.GetPackagesWithRecipientAndStatus()
-                .Where(package => package.Status.Name == "Pending")
-                .ToList().Select(package =>
+
+            var packagesPending = this.packagesService.GetPackagesWithRecipientAndStatus()
+               .Where(package => package.Status.Name == "Pending")
+               .Select(package => new PackagePendingViewModel()
+               {
+                   Id = package.Id,
+                   Description = package.Description,
+                   Weight = package.Weight,
+                   ShippingAddress = package.ShippingAddress,
+                   Recipient = package.Recipient.UserName
+               })
+               .ToList();
+
+            var packagesListingModel = new PackagePendingListnigViewModel()
             {
-                return new PackagePendingViewModel
+                Packages = packagesPending
+            };
+
+
+            return this.View(packagesListingModel);
+ 
+        }
+
+        [HttpGet]
+        public IActionResult Shipped()
+        {
+            var shippedPackages = this.packagesService.GetPackagesWithRecipientAndStatus()
+                .Where(package => package.Status.Name == "Shipped")
+                .ToList();
+
+            var packages = shippedPackages.Select(package => new PackageShippedViewModel()
+            {
+
+                Id = package.Id,
+                Description = package.Description,
+                Weight = package.Weight,
+                EstimatedDeliveryDate = package.EstimatedDeliveryDate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+                Recipient = package.Recipient.UserName
+            })
+            .ToList();
+
+            var packagesListingModel = new PackageShippedListingViewModel()
+            {
+                Packages = packages
+            };
+
+            return this.View(packagesListingModel);
+
+
+          //  return this.View(this.packagesService.GetPackagesWithRecipientAndStatus()
+          //      .Where(package => package.Status.Name == "Shipped")
+          //      .ToList().Select(package =>
+          //      {
+          //          return new PackageShippedViewModel
+          //          {
+          //              Id = package.Id,
+          //              Description = package.Description,
+          //              Weight = package.Weight,
+          //              EstimatedDeliveryDate = package.EstimatedDeliveryDate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+          //              Recipient = package.Recipient.UserName
+          //          };
+          //      }).ToList());
+        }
+
+        [HttpGet]
+        public IActionResult Delivered()
+        {
+            var packagesDelivered = this.packagesService.GetPackagesWithRecipientAndStatus()
+                .Where(package => package.Status.Name == "Delivered" || package.Status.Name == "Acquired")
+                .Select(package => new PackageDeliveredViewModel()
                 {
                     Id = package.Id,
                     Description = package.Description,
                     Weight = package.Weight,
                     ShippingAddress = package.ShippingAddress,
                     Recipient = package.Recipient.UserName
-                };
-            }).ToList());
-        }
+                    
+                })
+                .ToList();
 
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public IActionResult Shipped()
-        {
-            return this.View(this.packagesService.GetPackagesWithRecipientAndStatus()
-                .Where(package => package.Status.Name == "Shipped")
-                .ToList().Select(package =>
-                {
-                    return new PackageShippedViewModel
-                    {
-                        Id = package.Id,
-                        Description = package.Description,
-                        Weight = package.Weight,
-                        EstimatedDeliveryDate = package.EstimatedDeliveryDate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
-                        Recipient = package.Recipient.UserName
-                    };
-                }).ToList());
-        }
+            var packagesDeliveredListingModel = new PackageDeliveredListingViewModel()
+            {
+                Packages = packagesDelivered
+            };
 
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public IActionResult Delivered()
-        {
-            return this.View(this.packagesService.GetPackagesWithRecipientAndStatus()
-                .Where(package => package.Status.Name == "Delivered" || package.Status.Name == "Acquired")
-                .ToList().Select(package =>
-                {
-                    return new PackageDeliveredViewModel
-                    {
-                        Id = package.Id,
-                        Description = package.Description,
-                        Weight = package.Weight,
-                        ShippingAddress = package.ShippingAddress,
-                        Recipient = package.Recipient.UserName
-                    };
-                }).ToList());
+            return this.View(packagesDeliveredListingModel);
+
         }
     }
 }

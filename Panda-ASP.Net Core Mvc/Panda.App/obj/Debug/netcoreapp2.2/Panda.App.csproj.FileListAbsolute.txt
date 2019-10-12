@@ -23,7 +23,6 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net C
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
@@ -42,3 +41,8 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net C
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Panda.App.csproj.CopyComplete
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Panda.App.dll
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Panda.App.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Views\Packages\Create.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Views\Packages\Delivered.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Views\Packages\Details.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Views\Packages\Pending.g.cshtml.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\obj\Debug\netcoreapp2.2\Razor\Views\Packages\Shipped.g.cshtml.cs

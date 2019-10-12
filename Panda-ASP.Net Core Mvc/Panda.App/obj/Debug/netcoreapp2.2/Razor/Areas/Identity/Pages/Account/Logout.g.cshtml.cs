@@ -23,14 +23,8 @@ using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
-#line 1 "C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Panda-ASP.Net Core Mvc\Panda.App\Areas\Identity\Pages\Account\_ViewImports.cshtml"
-using Panda.App.Areas.Identity.Pages.Account;
-
-#line default
-#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"acf321d273a4b4dd8650c17231b06987dc03df69", @"/Areas/Identity/Pages/Account/Logout.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"532134ad7c55e926691468295bdf0d17cd07a516", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5e2cf9107dc6d5632f70bcff950fcf43b60b3db3", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_Logout : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -30,7 +30,9 @@ namespace Panda.App
 
             services.AddIdentity<PandaUser, PandaUserRole>()
                 .AddEntityFrameworkStores<PandaDbContext>()
-                .AddDefaultTokenProviders();
+                .AddDefaultTokenProviders()
+                .AddDefaultUI();
+
 
             services.AddTransient<IUsersService, UsersService>();
             services.AddTransient<IPackagesService, PackagesService>();
