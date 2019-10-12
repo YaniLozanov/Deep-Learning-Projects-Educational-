@@ -1,6 +1,7 @@
 # Educational-projects
 Projects made to improve my programming skills in programming
 
+</br>
 
 
 <p align= "center" >
@@ -74,3 +75,15 @@ Projects made to improve my programming skills in programming
   </a>
 </p>
 
+<p align= "center" >
+  <a href="https://github.com/YaniLozanov/Educational-projects/tree/master/Panda-ASP.Net%20Core%20Mvc/Panda.Tests">
+    <img src ="https://github.com/YaniLozanov/Educational-projects/blob/master/Images/Testing-Button.png" height="60" width="200">
+  </a>
+</p>
+
+
+<p align= "center" >
+  <a href="https://github.com/YaniLozanov/Educational-projects/tree/master/Panda-ASP.Net%20Core%20Mvc/Panda.Tests">
+    <img src ="https://github.com/YaniLozanov/Educational-projects/blob/master/Images/Testing-Image.png">
+  </a>
+</p>
