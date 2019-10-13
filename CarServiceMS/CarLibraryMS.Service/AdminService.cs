@@ -20,17 +20,16 @@ namespace CarLibraryMS.Service
 
         public async Task ChangeUserRole(ApplicationUser user, string role)
         {
-            user.Role = role;
+           user.Role = role;
 
-            this.context.Users.Update(user);
+           this.context.Users.Update(user);
            await this.context.SaveChangesAsync();
         }
-
         public void DeleteAdmin()
         {
+            // TODO
             throw new NotImplementedException();
         }
-
         public IList<ApplicationUser> GetAllAdmins()
         {
             var adminRoleId = this.context.Roles.FirstOrDefault(role => role.Name == "Admin").Id;
@@ -51,7 +50,6 @@ namespace CarLibraryMS.Service
 
             return users;
         }
-
         public IList<ApplicationUser> GetAllOrinaryUsers()
         {
             var usersRoleId = this.context.Roles.FirstOrDefault(role => role.Name == "User").Id;
@@ -62,13 +60,17 @@ namespace CarLibraryMS.Service
 
             return users;
         }
-
         public IList<ApplicationUser> GetAllUsers()
         {
             return this.context.Users
                 .Include(user => user.Cars)
                 .ToList();
         }
+        public ApplicationUser GetUserById(string id)
+        {
+            return context.Users.SingleOrDefault(user => user.Id == id);
+        }
+
         public IList<Car> GetAllCars()
         {
             var cars = this.context.Cars.
@@ -78,12 +80,7 @@ namespace CarLibraryMS.Service
 
             return cars;
         }
-
-        public ApplicationUser GetUserById(string id)
-        {
-            return context.Users.SingleOrDefault(user => user.Id == id);
-        }
-
+      
         public void EditPersonalityDesctription(string userId, string description)
         {
             var user = GetUserById(userId);

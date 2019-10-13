@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarServiceMS.Data", "CarSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarLibraryMS.Service", "CarLibraryMS.Service\CarLibraryMS.Service.csproj", "{537A7B26-7005-4344-9484-AFA454CAF58D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarServiceMS.Tests", "CarServiceMS.Tests\CarServiceMS.Tests.csproj", "{E923F6FD-B6C0-40B0-A3F4-DE24F92825B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{537A7B26-7005-4344-9484-AFA454CAF58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{537A7B26-7005-4344-9484-AFA454CAF58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{537A7B26-7005-4344-9484-AFA454CAF58D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E923F6FD-B6C0-40B0-A3F4-DE24F92825B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E923F6FD-B6C0-40B0-A3F4-DE24F92825B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E923F6FD-B6C0-40B0-A3F4-DE24F92825B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E923F6FD-B6C0-40B0-A3F4-DE24F92825B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
