@@ -1,0 +1,17 @@
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.deps.json
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.runtimeconfig.json
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.runtimeconfig.dev.json
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.dll
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.pdb
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.Data.dll
+C:\Users\Qni\Desktop\CvApi\CvApi\bin\Debug\netcoreapp2.2\CvApi.Data.pdb
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.RazorAssemblyInfo.cache
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.RazorAssemblyInfo.cs
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.AssemblyInfo.cs
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.RazorTargetAssemblyInfo.cache
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.csproj.CopyComplete
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.dll
+C:\Users\Qni\Desktop\CvApi\CvApi\obj\Debug\netcoreapp2.2\CvApi.pdb

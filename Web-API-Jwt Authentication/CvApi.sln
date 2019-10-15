@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvApi", "CvApi\CvApi.csproj", "{BA272800-5FC1-426B-B33E-5FF915D07A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvApi.Data", "CvApi.Data\CvApi.Data.csproj", "{8D509608-A3A6-422B-89B8-7F0B11995D90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA272800-5FC1-426B-B33E-5FF915D07A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA272800-5FC1-426B-B33E-5FF915D07A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA272800-5FC1-426B-B33E-5FF915D07A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA272800-5FC1-426B-B33E-5FF915D07A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D509608-A3A6-422B-89B8-7F0B11995D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D509608-A3A6-422B-89B8-7F0B11995D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D509608-A3A6-422B-89B8-7F0B11995D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D509608-A3A6-422B-89B8-7F0B11995D90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {054E6183-AA0E-4A9D-99A4-9275201E5300}
+	EndGlobalSection
+EndGlobal
