@@ -65,7 +65,7 @@ namespace CarServiceMS.Controllers
         {
             var user = this.carService.GetUserByName(this.User.Identity.Name);
 
-            var carsFromDb = this.carService.GetAllCars(user.Id);
+            var carsFromDb = this.carService.GetAllCarsForUserWithId(user.Id);
 
             if (carsFromDb != null)
             {
@@ -166,7 +166,7 @@ namespace CarServiceMS.Controllers
 
                 if (car.Number != carModel.Number)
                 {
-                    if (!this.carService.IsThereSuchCar(carModel.Number))
+                    if (!this.carService.IsThereSuchCarWithNumber(carModel.Number))
                     {
                         car.Number = carModel.Number;
                     }

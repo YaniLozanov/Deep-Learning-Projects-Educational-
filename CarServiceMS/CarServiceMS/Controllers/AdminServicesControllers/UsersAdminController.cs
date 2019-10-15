@@ -61,7 +61,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
         [HttpGet]
         public IActionResult ListUserCars(string id, string username)
         {
-            var carsFromDb = this.carService.GetAllCars(id);
+            var carsFromDb = this.carService.GetAllCarsForUserWithId(id);
 
             if (carsFromDb != null)
             {
@@ -204,7 +204,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
 
                 if (car.Number != carModel.Number)
                 {
-                    if (!this.carService.IsThereSuchCar(carModel.Number))
+                    if (!this.carService.IsThereSuchCarWithNumber(carModel.Number))
                     {
                         car.Number = carModel.Number;
                     }

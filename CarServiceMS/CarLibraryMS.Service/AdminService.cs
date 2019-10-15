@@ -66,11 +66,11 @@ namespace CarLibraryMS.Service
                 .Include(user => user.Cars)
                 .ToList();
         }
+
         public ApplicationUser GetUserById(string id)
         {
             return context.Users.SingleOrDefault(user => user.Id == id);
         }
-
         public IList<Car> GetAllCars()
         {
             var cars = this.context.Cars.

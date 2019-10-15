@@ -13,9 +13,9 @@ namespace CarServiceMS.Data.Interfaces
         void AddCar(Car car);
         void RemoveCar(int id);
         void EditCarData(Car car);
-        bool IsThereSuchCar(string number);
+        bool IsThereSuchCarWithNumber(string number);
 
-        IEnumerable<Car> GetAllCars(string userId);
+        IEnumerable<Car> GetAllCarsForUserWithId(string userId);
 
 
     }

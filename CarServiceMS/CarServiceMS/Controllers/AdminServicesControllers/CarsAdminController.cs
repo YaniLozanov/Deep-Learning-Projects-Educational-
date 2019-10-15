@@ -123,7 +123,7 @@ namespace CarServiceMS.Controllers.AdminServicesControllers
 
                 if (car.Number != carModel.Number)
                 {
-                    if (!this.carService.IsThereSuchCar(carModel.Number))
+                    if (!this.carService.IsThereSuchCarWithNumber(carModel.Number))
                     {
                         car.Number = carModel.Number;
                     }
