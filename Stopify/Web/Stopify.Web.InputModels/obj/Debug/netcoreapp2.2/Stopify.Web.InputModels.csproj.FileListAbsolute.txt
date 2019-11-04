@@ -1,0 +1,11 @@
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.InputModels\obj\Debug\netcoreapp2.2\Stopify.Web.InputModels.csproj.CopyComplete

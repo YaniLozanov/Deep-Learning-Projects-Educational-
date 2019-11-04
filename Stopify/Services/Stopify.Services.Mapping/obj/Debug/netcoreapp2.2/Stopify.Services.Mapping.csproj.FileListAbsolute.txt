@@ -1,0 +1,17 @@
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Services.Mapping.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Services.Mapping.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Services.Mapping.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Data.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Services.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Data.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Services.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\obj\Debug\netcoreapp2.2\Stopify.Services.Mapping.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Services\Stopify.Services.Mapping\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.pdb

@@ -1,0 +1,14 @@
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.csproj.CoreCompileInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Services.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Services.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\bin\Debug\netcoreapp2.2\Stopify.Web.InputModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.MappingProfile\obj\Debug\netcoreapp2.2\Stopify.Web.MappingProfile.pdb

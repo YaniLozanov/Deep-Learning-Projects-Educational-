@@ -1,0 +1,600 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web\\Stopify.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj",
+        "projectName": "Stopify.Data.Models",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj",
+        "projectName": "Stopify.Data",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj",
+        "projectName": "Stopify.Services.Mapping",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj",
+        "projectName": "Stopify.Services.Models",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data.Models\\Stopify.Data.Models\\Stopify.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\Stopify.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\Stopify.Services.csproj",
+        "projectName": "Stopify.Services",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\Stopify.Services.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj",
+        "projectName": "Stopify.Web.InputModels",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj",
+        "projectName": "Stopify.Web.ViewModels",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web\\Stopify.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web\\Stopify.Web.csproj",
+        "projectName": "Stopify.Web",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web\\Stopify.Web.csproj",
+        "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Data\\Stopify.Data\\Stopify.Data.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Mapping\\Stopify.Services.Mapping.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services.Models\\Stopify.Services.Models.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\Stopify.Services.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Services\\Stopify.Services\\Stopify.Services.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.InputModels\\Stopify.Web.InputModels.csproj"
+              },
+              "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Stopify\\Web\\Stopify.Web.ViewModels\\Stopify.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

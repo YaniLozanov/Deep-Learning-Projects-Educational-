@@ -1,0 +1,8 @@
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\bin\Debug\netcoreapp2.2\Stopify.Data.Models.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\bin\Debug\netcoreapp2.2\Stopify.Data.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\obj\Debug\netcoreapp2.2\Stopify.Data.Models.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\obj\Debug\netcoreapp2.2\Stopify.Data.Models.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\obj\Debug\netcoreapp2.2\Stopify.Data.Models.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\bin\Debug\netcoreapp2.2\Stopify.Data.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\obj\Debug\netcoreapp2.2\Stopify.Data.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Data\Stopify.Data.Models\Stopify.Data.Models\obj\Debug\netcoreapp2.2\Stopify.Data.Models.pdb
