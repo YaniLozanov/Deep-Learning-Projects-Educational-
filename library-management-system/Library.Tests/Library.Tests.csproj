@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="coveralls.io" Version="1.4.2" />
     <PackageReference Include="FluentAssertions" Version="5.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.4" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.1.1" />
