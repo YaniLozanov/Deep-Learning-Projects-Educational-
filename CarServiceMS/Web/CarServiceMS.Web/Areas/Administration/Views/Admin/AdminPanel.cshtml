@@ -1,0 +1,109 @@
+﻿
+@model CarServiceMS.Web.ViewModels.AdminViewModels.Statuses.StatusesViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "AdminPanel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/component.css" />
+    <!--[if IE]>
+
+    <![endif]-->
+</head>
+
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%;">
+    <h1 class="h1-show-cars border" align="center">Admin Services</h1>
+
+    <div>
+        <section class="pricing-section bg-1" style="padding:0px; background: rgba(255,255,255,0.9); border-bottom-left-radius:1%;  border-bottom-left-radius:1%">
+
+            <div class="pricing pricing--sonam">
+
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">Users</h3>
+
+                    <div class="pricing__price">@Model.UsersStatus.Count</div>
+
+                    <p class="pricing__sentence">Count</p>
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Оrdinary: <span class="span-li">@Model.UsersStatus.OrdinaryCount</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Admins: <span class="span-li">@Model.UsersStatus.AdminsCount</span></li>
+                        <li class="pricing__feature ">Banned: <span class="span-li">@Model.UsersStatus.BannedCount</span></li>
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListAllUsers", "AdminUser")";'>Show Users</button>
+
+
+                </div>
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">Cars</h3>
+
+                    <div class="pricing__price">@Model.CarsStatus.Count</div>
+
+                    <p class="pricing__sentence">Count</p>
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Process: <span class="span-li">@Model.CarsStatus.InPrcessCount</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Ready: <span class="span-li">@Model.CarsStatus.ReadyCount</span></li>
+                        <li class="pricing__feature ">Waiting: <span class="span-li">@Model.CarsStatus.WaitingCount</span></li>
+
+
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListAllCars", "AdminCar")";'>Show Cars</button>
+                </div>
+                <div class="pricing__item">
+                    <h3 class="pricing__title">Comming soon!</h3>
+
+                    <h3 class="pricing__title">Profit</h3>
+
+                    <div class="pricing__price"><span class="pricing__sentence">$</span>0</div>
+                    <p class="pricing__sentence">Dollars</p>
+
+
+                    <ul class="pricing__feature-list">
+
+                        <li class="pricing__feature ">Repairs: <span class="span-li">$0</span></li>
+                        <li style="background-color:#29272b" class="pricing__feature ">Air Conditioners: <span class="span-li">$0</span></li>
+                        <li class="pricing__feature ">Maintenance: <span class="span-li">$0</span></li>
+
+
+
+                    </ul>
+
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListUsers", "Admin")";'>Show Profit</button>
+
+                </div>
+
+            </div>
+            <div style="padding:5px" class="text-center">
+
+                <a asp-controller="Home" asp-action="Index">
+                    <button class="btn btn-dark button-Register">Back</button>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>

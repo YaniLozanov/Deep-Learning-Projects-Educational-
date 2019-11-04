@@ -1,0 +1,42 @@
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.deps.json
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.AssemblyInfo.cs
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.csproj.CopyComplete
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.InputModels.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.InputModels.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.ViewModels.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.ViewModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.InputModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.ViewModels.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.InputModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Web.ViewModels.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp2.2\CarServiceMS.Service.AutoMapper.pdb

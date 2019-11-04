@@ -1,0 +1,38 @@
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.deps.json
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.Interfaces.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.Interfaces.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.AssemblyInfo.cs
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.csproj.CopyComplete
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.dll
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.pdb
+C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.deps.json
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.Interfaces.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Service.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Services.Interfaces.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.CustomAttributes.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\bin\Debug\netcoreapp2.2\CarServiceMS.Data.Models.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.AssemblyInfo.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.csproj.CopyComplete
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.dll
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Services\CarServiceMS.Services\obj\Debug\netcoreapp2.2\CarServiceMS.Services.pdb

@@ -1,0 +1,5 @@
+C:\Users\Qni\Desktop\CarServiceMS\Data\CarServiceMS.Data.Models\bin\Debug\netcoreapp3.0\CarServiceMS.Data.Models.deps.json
+C:\Users\Qni\Desktop\CarServiceMS\Data\CarServiceMS.Data.Models\bin\Debug\netcoreapp3.0\CarServiceMS.Data.Models.dll
+C:\Users\Qni\Desktop\CarServiceMS\Data\CarServiceMS.Data.Models\obj\Debug\netcoreapp3.0\CarServiceMS.Data.Models.csprojAssemblyReference.cache
+C:\Users\Qni\Desktop\CarServiceMS\Data\CarServiceMS.Data.Models\obj\Debug\netcoreapp3.0\CarServiceMS.Data.Models.AssemblyInfoInputs.cache
+C:\Users\Qni\Desktop\CarServiceMS\Data\CarServiceMS.Data.Models\obj\Debug\netcoreapp3.0\CarServiceMS.Data.Models.AssemblyInfo.cs

@@ -1,0 +1,150 @@
+﻿@model CarServiceMS.Web.ViewModels.AdminViewModels.AdminCarViewModels.AdminCarListWithViewModels
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
+</head>
+
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%">
+
+
+
+    @if (@Model.Cars != null)
+    {
+
+
+        <h1 align="center" class="h1-show-cars border">Cars</h1>
+
+        <div style="overflow-x:auto;">
+            <table class="table-fill border" style="table-layout:auto;">
+
+                <thead>
+                    <tr>
+                        <th class="text-center" colspan="2">
+                            <input id="search-box" class="form-control input" onkeyup="search()" type="text" placeholder="Search..." />
+                        </th>
+
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                        <th class="text-center" colspan="2">
+                            <select class="browser-default custom-select" id="search-selector">
+
+                                <option value="Brand">Brand</option>
+                                <option value="Model">Model</option>
+                                <option value="YearFrom">Year From</option>
+                                <option value="Number">Number</option>
+                                <option value="Owner">Owner</option>
+
+                            </select>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="text-center custom-width-150">Brand</th>
+                        <th class="text-center custom-width-150">Model</th>
+                        <th class="text-center custom-width-150">Year From</th>
+                        <th class="text-center custom-width-150">Number</th>
+                        <th class="text-center custom-width-150">Owner</th>
+                        <th class="text-left custom-width-150"></th>
+                        <th class="text-left custom-width-150"></th>
+                    </tr>
+                    <tr></tr>
+                </thead>
+                <tbody class="table-hover">
+
+                    <tr id="NoUsers" style="display: none">
+                        <td class="text-center" colspan="7">
+                            <h1>
+                                <strong>There is no such car.</strong>
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- List all users, but cuurrent logged user -->
+                    @foreach (var car in this.Model.Cars)
+                    {
+                <tr>
+                    <td name="Brand" class="text-center">@car.Brand</td>
+                    <td name="Model" class="text-center">@car.Model</td>
+                    <td name="YearFrom" class="text-center">@car.YearFrom.ToShortDateString()</td>
+                    <td name="Number" class="text-center ">@car.Number</td>
+                    <td name="Owner" class="text-center">@car.Owner.UserName</td>
+
+                    <td class="text-center">
+
+                        <button id="show-remove-@car.Id" onclick="showRemoveTr(@car.Id)" class="btn btn-dark button-Register">Remove</button>
+
+                    </td>
+                    <td class="text-center">
+                        <a asp-controller="AdminCar" asp-action="EditCar" asp-route-id="@car.Id">
+                            <button class="btn btn-dark button-Register">Edit</button>
+                        </a>
+                    </td>
+                </tr>
+                        <tr id="remove-tr-@car.Id" style="display:none">
+                            <form asp-controller="AdminCar" asp-action="DeleteCar" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger input"></div>
+
+                                <td class="text-center" colspan="2" style="padding:10px">
+                                    <span>Your Password:</span>
+                                </td>
+                                <td class="text-center" colspan="3" style="padding:10px">
+                                    <input required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                                           asp-for="Password" class="form-control input" id="@car.Id" type="password" placeholder="Password..." />
+
+                                    <input asp-for="Id" value="@car.Id" id="hidden-input-@car.Id" type="hidden" />
+                                    <div style="padding-top:10px">
+                                        <span asp-validation-for="Password" class="text-danger" id="err-span-@car.Id"></span>
+                                    </div>
+                                </td>
+                                <td class="text-center" style="padding:10px ">
+                                    <a asp-controller="AdminCar" asp-action="DeleteCar" onclick="errorMessage(@car.Id)">
+                                        <button type="submit" class="btn btn-dark button-Register">Confirm</button>
+                                    </a>
+                                </td>
+                            </form>
+                            <td class="text-center" style="padding:5px">
+                                <button class="btn btn-dark button-Register" name="cancel" onclick="collapseRemoveTd(@car.Id)">Cancel</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <h1 align="center">There are no cars!</h1>
+    }
+
+    <div style="padding:20px; background:#FFFFFF" class=" border-top-grey text-center ">
+
+        <div style="padding:5px" class="text-center">
+
+            <a asp-controller="Admin" asp-action="AdminPanel">
+                <button class="btn btn-dark button-Register">Back</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/delete-car.js"></script>
+<script src="~/js/search-car.js"></script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
