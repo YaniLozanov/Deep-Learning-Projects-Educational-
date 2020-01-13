@@ -12119,11 +12119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.App\\Demo.App.csproj",
+      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.App\\Demo.App.csproj",
       "projectName": "Demo.App",
-      "projectPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.App\\Demo.App.csproj",
+      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.App\\Demo.App.csproj",
       "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.App\\obj\\",
+      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12142,8 +12142,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Data\\Demo.Data.csproj": {
-              "projectPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Data\\Demo.Data.csproj"
+            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Data\\Demo.Data.csproj": {
+              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Data\\Demo.Data.csproj"
             }
           }
         }
@@ -12180,10 +12180,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

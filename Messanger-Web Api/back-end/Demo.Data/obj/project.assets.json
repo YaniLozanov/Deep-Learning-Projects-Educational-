@@ -2594,11 +2594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Data\\Demo.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Data\\Demo.Data.csproj",
       "projectName": "Demo.Data",
-      "projectPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Data\\Demo.Data.csproj",
+      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Data\\Demo.Data.csproj",
       "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Data\\obj\\",
+      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2617,8 +2617,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Domain\\Demo.Domain.csproj": {
-              "projectPath": "C:\\Users\\Qni\\Desktop\\Messages\\Demo\\Demo.Domain\\Demo.Domain.csproj"
+            "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Domain\\Demo.Domain.csproj": {
+              "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Messanger-Web Api\\back-end\\Demo.Domain\\Demo.Domain.csproj"
             }
           }
         }
@@ -2644,10 +2644,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

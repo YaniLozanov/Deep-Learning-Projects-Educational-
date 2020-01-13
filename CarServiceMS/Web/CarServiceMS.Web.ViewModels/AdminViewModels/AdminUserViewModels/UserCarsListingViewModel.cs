@@ -29,6 +29,6 @@ namespace CarServiceMS.Web.ViewModels.AdminViewModels.AdminUserViewModels
 
         public ApplicationUserServiceModel Owner { get; set; }
 
-        public virtual IEnumerable<Manipulation> Manipulations { get; set; }
+        //public virtual IEnumerable<Manipulation> Manipulations { get; set; }
     }
 }

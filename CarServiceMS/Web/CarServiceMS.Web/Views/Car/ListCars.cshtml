@@ -1,7 +1,5 @@
 ﻿@model CarServiceMS.Web.ViewModels.CarViewModels.CarListWithViewModels
 
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -31,6 +29,8 @@
                             <th class="text-center custom-width-100">Number</th>
                             <th class="text-left custom-width-100"></th>
                             <th class="text-left custom-width-100"></th>
+                            <th class="text-left custom-width-100"></th>
+
 
                         </tr>
                     </thead>
@@ -54,6 +54,13 @@
                                         <button class="btn btn-dark button-Register">Edit</button>
                                     </a>
                                 </td>
+                                <td class="text-center">
+                                    <a asp-controller="Repair" asp-action="ListServiceCategories" asp-route-carId="@car.Id">
+                                        <button class="btn btn-dark button-Register">Services</button>
+
+                                    </a>
+                                </td>
+
 
                             </tr>
                             <tr id="remove-tr-@car.Id" style="display:none">
@@ -80,6 +87,7 @@
                                 <td class="text-center" style="padding:5px">
                                     <button class="btn btn-dark button-Register" name="cancel" onclick="collapseRemoveTd(@car.Id)">Cancel</button>
                                 </td>
+                                <td></td>
                             </tr>
                         }
                     </tbody>
@@ -90,14 +98,14 @@
         }
         else
         {
-            <h1 align="center" class="h1-show-cars">You do not have any cars!</h1>
+            <h1 align="center" class="h1-show-cars border">You do not have any cars!</h1>
 
         }
     }
     else
     {
 
-        <h1 align="center" class="h1-show-cars">You do not have any cars!</h1>
+        <h1 align="center" class="h1-show-cars border">You do not have any cars!</h1>
     }
 
     <div style="padding:20px; background:#FFFFFF" class=" border-top-grey text-center ">

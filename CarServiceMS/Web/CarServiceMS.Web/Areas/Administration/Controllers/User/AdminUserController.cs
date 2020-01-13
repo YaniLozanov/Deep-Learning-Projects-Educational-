@@ -262,7 +262,8 @@ namespace CarServiceMS.Web.Areas.Administration.Controllers.User
 
                 }
 
-                return this.View();
+                return RedirectToAction("ChangeUserRole", "AdminUser", new { userId = user.Id, username = user.UserName, currentRole = user.Role});
+
             }
         }
 

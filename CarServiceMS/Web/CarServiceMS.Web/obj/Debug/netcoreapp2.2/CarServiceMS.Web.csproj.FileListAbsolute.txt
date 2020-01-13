@@ -142,3 +142,10 @@ C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\We
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\CarServiceMS.Web.csproj.CopyComplete
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\CarServiceMS.Web.dll
 C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\CarServiceMS.Web.pdb
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Views\Repair\ListAllRepairs.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Views\Repair\ListServiceCategories.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Views\Repair\ShowRepairDetails.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Administration\Views\AdminRepair\ListAllRepairs.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Administration\Views\AdminRepair\ListServiceCategories.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Administration\Views\AdminRepair\ShowRepairDetails.cshtml.g.cs
+C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\CarServiceMS\Web\CarServiceMS.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Administration\Views\AdminRepair\CreateRepair.cshtml.g.cs

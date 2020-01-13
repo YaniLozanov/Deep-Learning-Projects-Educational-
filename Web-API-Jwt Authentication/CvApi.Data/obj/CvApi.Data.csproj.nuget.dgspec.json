@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj": {}
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj": {
+    "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj",
         "projectName": "CvApi.Data",
-        "projectPath": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj",
+        "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj",
         "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\obj\\",
+        "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -67,10 +67,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

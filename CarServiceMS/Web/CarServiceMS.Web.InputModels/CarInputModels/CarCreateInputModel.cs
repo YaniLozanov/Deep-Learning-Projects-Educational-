@@ -29,6 +29,6 @@ namespace CarServiceMS.Web.InputModels
 
         public ApplicationUserServiceModel Owner { get; set; }
 
-        public virtual IEnumerable<Manipulation> Manipulations { get; set; }
+        //public virtual IEnumerable<Manipulation> Manipulations { get; set; }
     }
 }

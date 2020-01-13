@@ -1,4 +1,4 @@
-﻿function errorMessage(carId) {
+function errorMessage(carId) {
 
     var password = document.getElementById(`${carId.toString()}`);
     var errSpan = document.getElementById(`err-span-${carId.toString()}`)

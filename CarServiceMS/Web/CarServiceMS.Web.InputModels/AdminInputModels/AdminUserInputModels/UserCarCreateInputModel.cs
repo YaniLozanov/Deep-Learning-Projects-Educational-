@@ -30,6 +30,6 @@ namespace CarServiceMS.Web.InputModels.AdminInputModels.AdminUserInputModels
 
         public ApplicationUserServiceModel Owner { get; set; }
 
-        public virtual IEnumerable<Manipulation> Manipulations { get; set; }
+       // public virtual IEnumerable<Manipulation> Manipulations { get; set; }
     }
 }

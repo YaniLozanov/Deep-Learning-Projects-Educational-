@@ -30,7 +30,6 @@ namespace CarServiceMS.Service.Models
         [Required]
         public ApplicationUserServiceModel Owner { get; set; }
 
-        public virtual IEnumerable<Manipulation> Manipulations { get; set; }
 
     }
 }

@@ -1,4 +1,6 @@
 ﻿using CarServiceMS.Data.Models;
+using CarServiceMS.Data.Models.CarServicesModels;
+using CarServiceMS.Data.Models.CarServicesModels.MaintenanceModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,11 +13,23 @@ namespace CarServiceMS.Data
         {
         }
 
+        // User
         public DbSet<ApplicationUser> User { get; set; }
 
+        // Car
         public DbSet<Car> Cars { get; set; }
 
-        public DbSet<Manipulation> Manipulations { get; set; }
+        // Car Services
+        public DbSet<Repair> Repairs { get; set; }
+        public DbSet<Maintenance> Maintenances { get; set; }
+
+        // Car Parts
+        public DbSet<RepairPart> RepairParts { get; set; }
+        public DbSet<MaintenancePart> MaintenanceParts { get; set; }
+
+        // Car Actions
+        public DbSet<ReportedDefect> ReportedDefects { get; set; }
+        public DbSet<CompletedAction> CompletedActions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -35,30 +35,32 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
 
                         <th class="text-center" colspan="2">
                             <select class="browser-default custom-select" id="search-selector">
-
                                 <option value="Brand">Brand</option>
                                 <option value="Model">Model</option>
                                 <option value="YearFrom">Year From</option>
                                 <option value="Number">Number</option>
                                 <option value="Owner">Owner</option>
-
                             </select>
 
                         </th>
                     </tr>
                     <tr>
-                        <th class="text-center custom-width-150">Brand</th>
-                        <th class="text-center custom-width-150">Model</th>
-                        <th class="text-center custom-width-150">Year From</th>
-                        <th class="text-center custom-width-150">Number</th>
-                        <th class="text-center custom-width-150">Owner</th>
-                        <th class="text-left custom-width-150"></th>
-                        <th class="text-left custom-width-150"></th>
+                        <th class="text-center custom-width-100">Brand</th>
+                        <th class="text-center custom-width-100">Model</th>
+                        <th class="text-center custom-width-100">Year From</th>
+                        <th class="text-center custom-width-100">Number</th>
+                        <th class="text-center custom-width-100">Owner</th>
+                        <th class="text-left custom-width-100"></th>
+                        <th class="text-left custom-width-100"></th>
+                        <th class="text-left custom-width-100"></th>
                     </tr>
                     <tr></tr>
+                    <tr></tr>
+
                 </thead>
                 <tbody class="table-hover">
 
@@ -88,6 +90,11 @@
                     <td class="text-center">
                         <a asp-controller="AdminCar" asp-action="EditCar" asp-route-id="@car.Id">
                             <button class="btn btn-dark button-Register">Edit</button>
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <a asp-controller="AdminRepair" asp-action="ListServiceCategories" asp-route-carId="@car.Id">
+                            <button class="btn btn-dark button-Register">Services</button>
                         </a>
                     </td>
                 </tr>
@@ -141,8 +148,10 @@
 
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/delete-car.js"></script>
-<script src="~/js/search-car.js"></script>
+<script src="~/js/Car/car-delete.js"></script>
+<script src="~/js/Car/car-search.js"></script>
+
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

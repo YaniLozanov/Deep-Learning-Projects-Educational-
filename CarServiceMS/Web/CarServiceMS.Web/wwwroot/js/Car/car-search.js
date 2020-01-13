@@ -1,4 +1,4 @@
-﻿let serachBox = document.getElementById("search-box");
+let serachBox = document.getElementById("search-box");
 let serachSelector = document.getElementById("search-selector");
 let noUsersRow = document.getElementById("NoUsers");
 let searchText = "";

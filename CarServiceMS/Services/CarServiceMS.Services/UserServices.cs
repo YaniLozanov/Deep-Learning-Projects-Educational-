@@ -49,7 +49,7 @@ namespace CarServiceMS.Services
         {
             // ApplicationUser
             var userFromDb = this.context.Users
-               .Include(user => user.Cars).ThenInclude(car => car.Manipulations)
+               .Include(user => user.Cars)
                .FirstOrDefault(user => user.UserName == name);
 
             // ApplicationUserServiceModel

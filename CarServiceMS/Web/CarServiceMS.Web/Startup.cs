@@ -61,10 +61,13 @@ namespace CarServiceMS
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
-
+            // Register the services
             services.AddScoped<ICarServices, CarServices>();
             services.AddScoped<IAdminServices, AdminServices>();
             services.AddScoped<IUserServices, UserServices>();
+            services.AddScoped<IRepairServices, RepairServices>();
+            services.AddScoped<IMaintenanceServices, MaintenanceServices>();
+
 
             services.AddMvcCore().AddDataAnnotations();
 
@@ -91,12 +94,14 @@ namespace CarServiceMS
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
+
                         context.Roles.Add(new IdentityRole
                         {
                             Name = "User",
                             NormalizedName = "USER"
 
                         });
+
                         context.Roles.Add(new IdentityRole
                         {
                             Name = "Banned",

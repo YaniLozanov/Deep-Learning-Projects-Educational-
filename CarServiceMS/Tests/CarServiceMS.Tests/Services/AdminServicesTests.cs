@@ -1,7 +1,9 @@
-﻿using CarServiceMS.Data;
+﻿using AutoMapper;
+using CarServiceMS.Data;
 using CarServiceMS.Data.Models;
 using CarServiceMS.Service.Models;
 using CarServiceMS.Services;
+using CarServiceMS.Services.Interfaces.AdminInterfaces;
 using CarServiceMS.Tests.Factories;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -13,26 +15,50 @@ using Xunit;
 
 namespace CarServiceMS.Tests.Services
 {
-    // TODO: To Fix the bug: When I run all tests together, they fail.
-
+    
     public class AdminServicesTests
     {
+
+        ApplicationDbContext context;
+        IAdminServices adminServices;
+        IMapper mapper;
+
+        public AdminServicesTests()
+        {
+            // DbContext.
+            var contextFactory = new ApplicationDbContextFactory();
+            this.context = contextFactory.CreateApplicationDbContext();
+
+            if (this.context.Users.Any(x => x.Role == "Admin") == false)
+            {
+                this.SeedDbWithAdmins(this.context);
+            }
+
+            if (this.context.Users.Any(x => x.Role == "User") == false)
+            {
+                this.SeedDbWithUsers(this.context);
+            }
+            if (this.context.Users.Any(x => x.Role == "Banned") == false)
+            {
+                this.SeedDbWithBanned(this.context);
+            }
+            if (this.context.Cars.Any() == false)
+            {
+                this.SeedDbWithCars(this.context);
+            }
+
+            // AutoMapper.
+            var mapperFactory = new AutoMapperFactory();
+            this.mapper = mapperFactory.CreateMapper();
+
+            // Services.
+            this.adminServices = new AdminServices(this.context, this.mapper);
+        }
+
         // Tests for Method: GetAllAdmins().
         [Fact]
         public void TestGetAllAdmins_WithTestData_ShouldReturnAllUsersInRoleAdmin()
         {
-    
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
-
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithAdmins(context); // Count: 2
-            SeedDbWithUsers(context);   // Count: 2
 
             // Act
             var actualAdminsCount = adminServices.GetAllAdmins().Count();
@@ -47,17 +73,8 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public void TestGetAllAdmins_WithoutTestData_ShouldThrowsArgumentException()
         {
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
-
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context);   // Count: 2
-            context.Roles.Add(CreateRoleAdmin());
-
+            this.context.Roles.Add(CreateRoleAdmin());
+            
             Assert.Throws<ArgumentException>(() => adminServices.GetAllAdmins().Count());
         }
 
@@ -66,17 +83,6 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public void TestGetAllBannedUsers_WithTestData_ShouldReturnAllUsersInRoleBanned()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
-
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithBanned(context); // Count: 2
-            SeedDbWithUsers(context);   // Count: 2
 
             // Act
             var actualBannedUsersCount = adminServices.GetAllBannedUsers().Count();
@@ -91,18 +97,11 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public void TestGetAllBannedUsers_WithoutTestData_ShouldThrowsArgumentException()
         {
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
+           // Act
+            this.context.Roles.Add(CreateRoleAdmin());
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context);   // Count: 2
-            context.Roles.Add(CreateRoleAdmin());
-
-            Assert.Throws<ArgumentException>(() => adminServices.GetAllBannedUsers().Count());
+            // Assert
+            Assert.Throws<ArgumentException>(() => this.adminServices.GetAllBannedUsers().Count());
         }
 
 
@@ -110,22 +109,11 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public void TestGetAllOrinaryUsers_WithTestData_ShouldReturnAllUsersInRoleUser()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
+           // Act
+            var actualOrdanaryUsersCount = this.adminServices.GetAllOrinaryUsers().Count();
 
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithBanned(context); // Count: 2
-            SeedDbWithUsers(context);   // Count: 2
-
-            // Act
-            var actualOrdanaryUsersCount = adminServices.GetAllOrinaryUsers().Count();
-
-            var expextedCount = context.Users.Where(user => user.Role == "User").Count(); // Expected Count: 2
+            var expextedCount = this.context.Users.Where(user => user.Role == "User").Count(); // Expected Count: 2
             var actualCount = actualOrdanaryUsersCount;
 
             // Assert 
@@ -135,40 +123,19 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public void TestGetAllOrinaryUsers_WithoutTestData_ShouldThrowsArgumentException()
         {
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
+            this.context.Roles.Add(CreateRoleAdmin());
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithAdmins(context); // Count: 2
-
-            context.Roles.Add(CreateRoleAdmin());
-
-            Assert.Throws<ArgumentException>(() => adminServices.GetAllOrinaryUsers().Count());
+            Assert.Throws<ArgumentException>(() => this.adminServices.GetAllOrinaryUsers().Count());
         }
-
 
         // Tests for Method: ChangeUserRoleAsync(ApplicationUserServiceModel user, string role).
         [Fact]
         public async Task TestChangeUserRoleAsync_WithTestData_ShouldChangeUsersRole()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context); // Count: 2
-
-            var testApplicationUser = context.Users.FirstOrDefault(); // Take the first user.
+            var testApplicationUser = this.context.Users.FirstOrDefault(); // Take the first user.
             var testRole = "Admin";
-            var testApplicationUserServiceModel = mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
+            var testApplicationUserServiceModel = this.mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
 
             // Act
             await adminServices.ChangeUserRoleAsync(testApplicationUserServiceModel, testRole);
@@ -185,23 +152,13 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public async Task TestChangeUserRoleAsync_WithUserNull_ShouldNotChangeUsersRole()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context); // Count: 2
-
-            var testApplicationUser = context.Users.FirstOrDefault(); // Take the first user.
+            var testApplicationUser = this.context.Users.FirstOrDefault(); // Take the first user.
             var testRole = "Admin";
 
             // Act
-            await adminServices.ChangeUserRoleAsync(null, testRole);
-            var testApplicationUserServiceModel = mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
+            await this.adminServices.ChangeUserRoleAsync(null, testRole);
+            var testApplicationUserServiceModel = this.mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
 
             var expectedRole = "User";
             var actualRole = context.Users
@@ -215,23 +172,13 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public async Task TestChangeUserRoleAsync_WithRoleNull_ShouldNotChangeUsersRole()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
-
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context); // Count: 2
-
-            var testApplicationUser = context.Users.FirstOrDefault(); // Take the first user.
+            // Arrage
+            var testApplicationUser = this.context.Users.FirstOrDefault(); // Take the first user.
          
-            var testApplicationUserServiceModel = mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
+            var testApplicationUserServiceModel = this.mapper.Map<ApplicationUserServiceModel>(testApplicationUser);
 
             // Act
-            await adminServices.ChangeUserRoleAsync(testApplicationUserServiceModel, null);
+            await this.adminServices.ChangeUserRoleAsync(testApplicationUserServiceModel, null);
 
             var expectedRole = "User";
             var actualRole = context.Users
@@ -247,28 +194,18 @@ namespace CarServiceMS.Tests.Services
         // Tests for Method: EditPersonalityDesctriptionAsync(string userId, string description).
         [Fact]
         public async Task TestEditPersonalityDesctriptionAsync_WithTestData_ShouldEditThePersonalityDescription()
-        {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
+        { 
 
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context); // Count: 2
-
-            var testApplicationUser = context.Users.FirstOrDefault(); // Take the first user.
+            var testApplicationUser = this.context.Users.FirstOrDefault(); // Take the first user.
             var userId = testApplicationUser.Id;
             var newPersonalityDesctription = "Test Description!";
           
 
             // Act
-            await adminServices.EditPersonalityDesctriptionAsync(userId, newPersonalityDesctription);
+            await this.adminServices.EditPersonalityDesctriptionAsync(userId, newPersonalityDesctription);
 
             var expectedDescription = newPersonalityDesctription;
-            var actualRole = context.Users
+            var actualRole = this.context.Users
                 .FirstOrDefault(user => user.Id == userId)
                 .PersonalityDesctription;
 
@@ -279,27 +216,17 @@ namespace CarServiceMS.Tests.Services
         [Fact]
         public async Task TestEditPersonalityDesctriptionAsync_WithWithUserIdNull_ShouldNotEditThePersonalityDescription()
         {
-            // Arrange
-            var contextFactory = new ApplicationDbContextFactory();
-            var context = contextFactory.CreateApplicationDbContext();
-
-            var mapperFactory = new AutoMapperFactory();
-            var mapper = mapperFactory.CreateMapper();
-
-            var adminServices = new AdminServices(context, mapper);
-
-            SeedDbWithUsers(context); // Count: 2
-
-            var testApplicationUser = context.Users.FirstOrDefault(); // Take the first user.
+            // Arrage
+            var testApplicationUser = this.context.Users.FirstOrDefault(); // Take the first user.
             var userId = testApplicationUser.Id;
             var newPersonalityDesctription = "Test Description!";
 
 
             // Act
-            await adminServices.EditPersonalityDesctriptionAsync(null, newPersonalityDesctription);
+            await this.adminServices.EditPersonalityDesctriptionAsync(null, newPersonalityDesctription);
 
             var expectedDescription = testApplicationUser.PersonalityDesctription;
-            var actualDescription = context.Users
+            var actualDescription = this.context.Users
                 .FirstOrDefault(user => user.Id == userId)
                 .PersonalityDesctription;
 

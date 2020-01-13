@@ -1,0 +1,76 @@
+﻿@model CarServiceMS.Web.ViewModels.CarServicesViewModels.RepairViewModels.RepairListWithListingViewModels
+
+<!DOCTYPE html>
+
+<html lang="en">
+</html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="~/css/CarTable.css">
+</head>
+
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100% ">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @if (@Model.Repairs != null)
+    {
+        @if (Model.Repairs.Any())
+        {
+            <h1 class="border h1-show-cars" align="center">Repairs</h1>
+
+            <div style="overflow-x:auto;">
+                <table class="table-fill border" style="table-layout:auto">
+
+                    <thead>
+                        <tr>
+                            <th class="text-center custom-width-180" >Job Number</th>
+                            <th class="text-center custom-width-100">Date</th>                      
+                            <th class="text-left custom-width-100"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-hover">
+
+
+                        @foreach (var repair in this.Model.Repairs)
+                        {
+                            <tr>
+                                <td class="text-center">@repair.Id</td>
+                                <td class="text-center">@repair.JobDate</td>
+                                <td class="text-center">
+                                    <a asp-controller="Repair" asp-action="ShowRepairDetails" asp-route-repairId="@repair.Id">
+                                        <button class="btn btn-dark button-Register">Details</button>
+                                    </a>
+
+                                </td>                                  
+                           </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+        }
+        else
+        {
+            <h1 align="center" class="border h1-show-cars">This car has no Repairs!</h1>
+
+        }
+    }
+    else
+    {
+
+        <h1 align="center" class="border h1-show-cars">This car has no Repairs!</h1>
+    }
+
+
+
+</body>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

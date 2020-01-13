@@ -72,7 +72,6 @@ namespace CarServiceMS.Services
         {
 
             var carFromDb = this.context.Cars
-            .Include(car => car.Manipulations)
             .FirstOrDefault(car => car.Id == carId);
 
             var carServiceModel = this.mapper.Map<CarServiceModel>(carFromDb);

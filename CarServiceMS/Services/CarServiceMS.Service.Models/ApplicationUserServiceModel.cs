@@ -8,7 +8,7 @@ namespace CarServiceMS.Service.Models
     public class ApplicationUserServiceModel : IdentityUser
     {
         [Required]
-        public DateTime MemberSince { get; set; } = DateTime.Now;
+        public DateTime MemberSince { get; set; }
         public int ClubPoints { get; set; }
         public string PersonalityDesctription { get; set; }
 

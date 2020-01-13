@@ -3700,11 +3700,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj",
       "projectName": "CvApi.Data",
-      "projectPath": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\CvApi.Data.csproj",
+      "projectPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\CvApi.Data.csproj",
       "packagesPath": "C:\\Users\\Qni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qni\\Desktop\\CvApi\\CvApi.Data\\obj\\",
+      "outputPath": "C:\\Users\\Qni\\Desktop\\Projects\\C# Web\\GitHub\\Educational-projects\\Web-API-Jwt Authentication\\CvApi.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3760,10 +3760,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -3772,7 +3778,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Mvc2Futures 2.0.50217' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "message": "Package 'Mvc2Futures 2.0.50217' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Mvc2Futures",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"

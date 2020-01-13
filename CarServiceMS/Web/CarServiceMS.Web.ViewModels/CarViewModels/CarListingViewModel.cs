@@ -1,8 +1,6 @@
 ﻿using CarServiceMS.Data.Attributes;
-using CarServiceMS.Data.Models;
 using CarServiceMS.Service.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CarServiceMS.Web.ViewModels.CarViewModels
@@ -25,10 +23,8 @@ namespace CarServiceMS.Web.ViewModels.CarViewModels
         [Required]
         public DateTime YearFrom { get; set; }
         [Required]
-        public DateTime RegistredOn { get; set; } = DateTime.Now;
+        public DateTime RegistredOn { get; set; }
 
         public ApplicationUserServiceModel Owner { get; set; }
-
-        public virtual IEnumerable<Manipulation> Manipulations { get; set; }
     }
 }

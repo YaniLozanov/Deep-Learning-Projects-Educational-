@@ -1,0 +1,74 @@
+﻿@model CarServiceMS.Web.ViewModels.CarServicesViewModels.ServiceCategoriesViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Service Categories";
+    int carId = (int)ViewData["carId"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/AdminPageCss/component.css" />
+
+</head>
+
+<body style="background-image: url(/images/backgorund_2.jpg-1.png); background-size: 100%;">
+    <h1 class="h1-show-cars border" align="center">Car Services</h1>
+
+    <div>
+        <section class="pricing-section bg-1" style="padding:0px; background: rgba(255,255,255,0.9); border-bottom-left-radius:1%;  border-bottom-left-radius:1%">
+
+            <div class="pricing pricing--sonam">
+
+                <div class="pricing__item">
+
+                    <h3 class="pricing__title">
+                        Repairs
+                    </h3>
+
+                    <div class="pricing__title">
+                        <img src="~/images/service-categories-repairs.png" style="height: 100%; width:100%; position: center" />
+
+                    </div>
+
+                    <ul class="pricing__feature-list">
+                        <li class="pricing__feature ">Count: <span class="span-li">@Model.RepairsCount</span></li>
+                    </ul>
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListAllRepairs", "Repair", new {carId})";'>Show Repairs</button>
+                </div>
+                <div class="pricing__item">
+                    <h3 class="pricing__title">
+                        Maintenances
+                    </h3>
+
+                    <div class="pricing__title">
+                        <img src="~/images/service-categories-maintenances.png" style="height: 100%; width:100%; position: center" />
+
+                    </div>
+
+                    <ul class="pricing__feature-list">
+                        <li class="pricing__feature ">Count: <span class="span-li">@Model.MaintenancesCount</span></li>
+                    </ul>
+
+                    <button class="pricing__action" onclick='window.location = "@Url.Action("ListCars", "Repair")";'>Show Maintenances</button>
+                </div>
+            </div>
+            <div style="padding:5px" class="text-center">
+
+                <a asp-controller="Car" asp-action="ListCars">
+                    <button class="btn btn-dark button-Register">Back</button>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
