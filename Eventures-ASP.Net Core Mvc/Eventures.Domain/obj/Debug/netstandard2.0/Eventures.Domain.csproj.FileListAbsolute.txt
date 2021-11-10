@@ -1,6 +1,0 @@
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\obj\Debug\netstandard2.0\Eventures.Domain.csprojAssemblyReference.cache
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\obj\Debug\netstandard2.0\Eventures.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\obj\Debug\netstandard2.0\Eventures.Domain.AssemblyInfoInputs.cache
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\obj\Debug\netstandard2.0\Eventures.Domain.AssemblyInfo.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\bin\Debug\netstandard2.0\Eventures.Domain.deps.json
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Eventures-ASP.Net Core Mvc\Eventures.Domain\bin\Debug\netstandard2.0\Eventures.Domain.dll
