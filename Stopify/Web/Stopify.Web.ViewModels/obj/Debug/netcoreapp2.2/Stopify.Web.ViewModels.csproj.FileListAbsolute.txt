@@ -1,8 +1,0 @@
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.deps.json
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.dll
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\bin\Debug\netcoreapp2.2\Stopify.Web.ViewModels.pdb
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\obj\Debug\netcoreapp2.2\Stopify.Web.ViewModels.csprojAssemblyReference.cache
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\obj\Debug\netcoreapp2.2\Stopify.Web.ViewModels.AssemblyInfoInputs.cache
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\obj\Debug\netcoreapp2.2\Stopify.Web.ViewModels.AssemblyInfo.cs
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\obj\Debug\netcoreapp2.2\Stopify.Web.ViewModels.dll
-C:\Users\Qni\Desktop\Projects\C# Web\GitHub\Educational-projects\Stopify\Web\Stopify.Web.ViewModels\obj\Debug\netcoreapp2.2\Stopify.Web.ViewModels.pdb
