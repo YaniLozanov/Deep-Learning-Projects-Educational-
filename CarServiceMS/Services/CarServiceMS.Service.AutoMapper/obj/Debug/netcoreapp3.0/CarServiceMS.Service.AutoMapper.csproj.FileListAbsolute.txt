@@ -1,8 +1,0 @@
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.deps.json
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.dll
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.csprojAssemblyReference.cache
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.AssemblyInfoInputs.cache
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.AssemblyInfo.cs
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\bin\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.pdb
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.dll
-C:\Users\Qni\Desktop\CarServiceMS\Services\CarServiceMS.Service.AutoMapper\obj\Debug\netcoreapp3.0\CarServiceMS.Service.AutoMapper.pdb
